@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata>
+  <groupId>net.cake</groupId>
+  <artifactId>operator-beans</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>1</buildNumber>
+      <timestamp>20180515.073201</timestamp>
+    </snapshot>
+    <lastUpdated>20180515073201</lastUpdated>
+  </versioning>
+</metadata>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata>
+  <groupId>com.leapset.common</groupId>
+  <artifactId>api-core</artifactId>
+  <version>5.4.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>4</buildNumber>
+      <timestamp>20180511.125205</timestamp>
+    </snapshot>
+    <lastUpdated>20180511125205</lastUpdated>
+  </versioning>
+</metadata>

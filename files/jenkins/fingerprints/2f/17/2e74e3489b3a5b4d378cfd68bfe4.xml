@@ -1,0 +1,17 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2018-06-04 05:32:46.873 UTC</timestamp>
+  <md5sum>2f172e74e3489b3a5b4d378cfd68bfe4</md5sum>
+  <fileName>Credential id=f30e70d3-5a2f-41c1-8a7f-9d3b6a107bc0 name=thilanj/******</fileName>
+  <usages>
+    <entry>
+      <string>S3</string>
+      <ranges>1-298</ranges>
+    </entry>
+    <entry>
+      <string>mapi_dev</string>
+      <ranges>1-27</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

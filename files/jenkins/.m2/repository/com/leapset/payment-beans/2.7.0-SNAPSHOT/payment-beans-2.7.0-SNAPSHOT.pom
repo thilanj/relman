@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.leapset</groupId>
+    <artifactId>payment-beans</artifactId>
+    <version>2.7.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Payment Beans</name>
+
+    <properties>
+        <fasterxml.version>2.7.5</fasterxml.version>
+        <project.repo.url>svn+ssh://www.monvia.com/monvia/product/leapset/trunk/service/payment-beans</project.repo.url>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>leapset.repository</id>
+            <url>http://repo.leapset.com/archiva/repository/release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>leapset.snapshot.repository</id>
+            <name>Archiva Managed Leapset SNAPSHOT Repository</name>
+            <url>http://repo.leapset.com/archiva/repository/snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <scm>
+        <developerConnection>
+            scm:svn:svn+ssh://www.monvia.com/monvia/product/leapset/trunk/service/payment-beans/branches/payment_beans_1.0
+        </developerConnection>
+        <connection>
+            scm:svn:svn+ssh://www.monvia.com/monvia/product/leapset/trunk/service/payment-beans/branches/payment_beans_1.0
+        </connection>
+    </scm>
+
+    <dependencies>
+
+        <!-- Jackson JSON Mapper -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${fasterxml.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${fasterxml.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${fasterxml.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <inherited>true</inherited>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <developmentVersion>
+                        ${project.version}
+                    </developmentVersion>
+                    <releaseVersion>
+                        ${project.version}
+                    </releaseVersion>
+                    <tagNameFormat>${project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <inherited>true</inherited>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <configuration>
+                    <tagBase>${project.repo.url}/tags</tagBase>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata>
+  <groupId>com.leapset</groupId>
+  <artifactId>admin-beans</artifactId>
+  <version>5.0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>1</buildNumber>
+      <timestamp>20180511.045909</timestamp>
+    </snapshot>
+    <lastUpdated>20180511045909</lastUpdated>
+  </versioning>
+</metadata>

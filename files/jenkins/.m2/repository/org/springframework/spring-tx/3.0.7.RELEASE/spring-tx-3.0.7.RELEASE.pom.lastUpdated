@@ -1,0 +1,9 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Jun 04 05:42:26 UTC 2018
+http\://repo.leapset.com/archiva/repository/leapset.repository/.error=
+http\://repo.maven.apache.org/maven2/.lastUpdated=1528090946192
+http\://repo.bodar.com/.error=
+http\://files.couchbase.com/maven2/.lastUpdated=1528090946647
+http\://repo.bodar.com/.lastUpdated=1528090945829
+http\://files.couchbase.com/maven2/.error=
+http\://repo.leapset.com/archiva/repository/leapset.repository/.lastUpdated=1528090945225

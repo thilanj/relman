@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata>
+  <groupId>com.leapset.rest</groupId>
+  <artifactId>rest-client</artifactId>
+  <version>6.0.0.9-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>17</buildNumber>
+      <timestamp>20180511.070613</timestamp>
+    </snapshot>
+    <lastUpdated>20180511070613</lastUpdated>
+  </versioning>
+</metadata>

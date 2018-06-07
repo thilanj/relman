@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.leapset</groupId>
+    <artifactId>paypal-beans</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <name>Paypal Beans</name>
+
+    <properties>
+        <jackson.version>2.7.5</jackson.version>
+        <testng.version>6.8</testng.version>
+        <java.version>1.6</java.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>leapset.repository</id>
+            <url>http://repo.leapset.com/archiva/repository/leapset.repository/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>leapset.repository</id>
+            <url>http://repo.leapset.com/archiva/repository/leapset.repository/</url>
+        </repository>
+        <snapshotRepository>
+            <id>leapset.snapshot.repository</id>
+            <name>Archiva Managed Leapset SNAPSHOT Repository</name>
+            <url>http://repo.leapset.com/archiva/repository/snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>

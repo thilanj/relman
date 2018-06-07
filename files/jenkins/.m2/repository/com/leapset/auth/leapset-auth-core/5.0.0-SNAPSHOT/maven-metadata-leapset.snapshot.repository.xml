@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata>
+  <groupId>com.leapset.auth</groupId>
+  <artifactId>leapset-auth-core</artifactId>
+  <version>5.0.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>3</buildNumber>
+      <timestamp>20180511.122904</timestamp>
+    </snapshot>
+    <lastUpdated>20180511122904</lastUpdated>
+  </versioning>
+</metadata>

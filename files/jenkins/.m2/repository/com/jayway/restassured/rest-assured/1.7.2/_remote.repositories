@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Jun 04 05:49:00 UTC 2018
+rest-assured-1.7.2.jar>central=
+rest-assured-1.7.2.pom>central=
+rest-assured-1.7.2.pom>sonatype-snapshots=
+rest-assured-1.7.2.jar>sonatype-snapshots=

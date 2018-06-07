@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata>
+  <groupId>net.cake</groupId>
+  <artifactId>profile-api</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>1</buildNumber>
+      <timestamp>20180516.093515</timestamp>
+    </snapshot>
+    <lastUpdated>20180516093515</lastUpdated>
+  </versioning>
+</metadata>

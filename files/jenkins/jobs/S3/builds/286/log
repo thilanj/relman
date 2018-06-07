@@ -1,0 +1,176 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/S3
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository Config/CLR/7.18.1.0/develop
+Seen branch in repository Config/CLR/7.18.1.0/release
+Seen branch in repository Config/PLAT-11371-remove-generic-users-from-rabbitmq
+Seen branch in repository Config/POS-1813-mapi-create-clocked-in-job-if-not
+Seen branch in repository Config/POS-3998-defualt-job-color
+Seen branch in repository Config/POS-4106-delete-user
+Seen branch in repository Config/bugfix/PLAT-5133-merchant-portal-access-for-employees
+Seen branch in repository Config/db_config_change
+Seen branch in repository Config/feature/PLAT-1-1
+Seen branch in repository Config/feature/PLAT-3372-pass-account-id-for-pre-auth-ref
+Seen branch in repository Config/feature/PLAT-4305-synch-vantiv-creds-to-pos
+Seen branch in repository Config/feature/PLAT-4359-pos-idm-migration
+Seen branch in repository Config/feature/PLAT-4643-change-alerts-to-trycake
+Seen branch in repository Config/feature/PLAT-4654-registration-email-changes
+Seen branch in repository Config/feature/PLAT-4674-handle-employee-promotion-demotion
+Seen branch in repository Config/feature/PLAT-5016-integrate-swagger
+Seen branch in repository Config/feature/PLAT-5249-operator-api-host
+Seen branch in repository Config/feature/PLAT-5437/PLAT-5662-Handling-Shard
+Seen branch in repository Config/feature/PLAT-5441-point-to-idm-helper
+Seen branch in repository Config/feature/PLAT-6-Notifications
+Seen branch in repository Config/feature/PLAT-6-Notifications-WIP
+Seen branch in repository Config/feature/PLAT-6290-giftcard-enhancements
+Seen branch in repository Config/feature/PLAT-6290-giftcard-enhancements-M
+Seen branch in repository Config/feature/PLAT-7180-support-ops-admin-login
+Seen branch in repository Config/feature/PLAT-SP-6
+Seen branch in repository Config/feature/PLAT-Update-Wallet-Properties
+Seen branch in repository Config/feature/PLAT-Wallet-Configs
+Seen branch in repository Config/feature/SSP-SA-Integration
+Seen branch in repository Config/feature/SSP-SA-Integration-M
+Seen branch in repository Config/feature/couch-url-update
+Seen branch in repository Config/feature/pos-to-cake-fixes
+Seen branch in repository Config/feature/pulse-integration-usermanagement
+Seen branch in repository Config/master
+Seen branch in repository Config/release/CLR-6.47.0.0
+Seen branch in repository Config/release/CLR-6.51.1.0
+Seen branch in repository Config/release/LR-6.24.3.0
+Seen branch in repository Config/release/LR-6.24.3.0-Kalinga
+Seen branch in repository Config/release/PLAT-1-15
+Seen branch in repository Config/release/PLAT-1-9
+Seen branch in repository Config/release/PLAT-Sprint-18-Payment-accommodation
+Seen branch in repository Config/sprint/cinco/6.24.0.0/develop
+Seen branch in repository Config/task/POS-1319-update-users-permissions-mapi
+Seen branch in repository Config/task/POS-1323-create-user-old-merchant-mapi
+Seen branch in repository Config/task/POS-1624-mapi-pubhubsub-refactor-subscriber
+Seen branch in repository Config/task/POS-2395-add-extra-query-parameter
+Seen branch in repository Config/task/POS-822-test-config
+Seen branch in repository Config/task/update-job-assignments-on-user-update
+Seen branch in repository MAPI/CLR/7.18.1.0/develop
+Seen branch in repository MAPI/CLR/7.18.2.0/develop
+Seen branch in repository MAPI/CLR/7.18.2.0/release
+Seen branch in repository MAPI/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository MAPI/ci/ci-test2
+Seen branch in repository MAPI/ci/ci_test1
+Seen branch in repository MAPI/ci/ci_test2
+Seen branch in repository MAPI/ci/ci_test3
+Seen branch in repository MAPI/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository MAPI/feature/ci-barscreen
+Seen branch in repository MAPI/feature/ci-test1
+Seen branch in repository MAPI/feature/ci-test2
+Seen branch in repository MAPI/feature/ci_test3
+Seen branch in repository MAPI/master
+Seen branch in repository MAPI/relman/ci-dev/bar-screen
+Seen branch in repository MAPI/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository MAPI/temp/POS-4780-changes
+Seen branch in repository MAPI/temp/plat-1-build
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci-test4
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci-test3
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/master
+Seen branch in repository origin/relman/ci-dev/bar-screen
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen branch in repository origin1/CLR/7.18.1.0/develop
+Seen branch in repository origin1/CLR/7.18.1.0/release
+Seen branch in repository origin1/PLAT-11371-remove-generic-users-from-rabbitmq
+Seen branch in repository origin1/POS-1813-mapi-create-clocked-in-job-if-not
+Seen branch in repository origin1/POS-3998-defualt-job-color
+Seen branch in repository origin1/POS-4106-delete-user
+Seen branch in repository origin1/bugfix/PLAT-5133-merchant-portal-access-for-employees
+Seen branch in repository origin1/db_config_change
+Seen branch in repository origin1/feature/PLAT-1-1
+Seen branch in repository origin1/feature/PLAT-3372-pass-account-id-for-pre-auth-ref
+Seen branch in repository origin1/feature/PLAT-4305-synch-vantiv-creds-to-pos
+Seen branch in repository origin1/feature/PLAT-4359-pos-idm-migration
+Seen branch in repository origin1/feature/PLAT-4643-change-alerts-to-trycake
+Seen branch in repository origin1/feature/PLAT-4654-registration-email-changes
+Seen branch in repository origin1/feature/PLAT-4674-handle-employee-promotion-demotion
+Seen branch in repository origin1/feature/PLAT-5016-integrate-swagger
+Seen branch in repository origin1/feature/PLAT-5249-operator-api-host
+Seen branch in repository origin1/feature/PLAT-5437/PLAT-5662-Handling-Shard
+Seen branch in repository origin1/feature/PLAT-5441-point-to-idm-helper
+Seen branch in repository origin1/feature/PLAT-6-Notifications
+Seen branch in repository origin1/feature/PLAT-6-Notifications-WIP
+Seen branch in repository origin1/feature/PLAT-6290-giftcard-enhancements
+Seen branch in repository origin1/feature/PLAT-6290-giftcard-enhancements-M
+Seen branch in repository origin1/feature/PLAT-7180-support-ops-admin-login
+Seen branch in repository origin1/feature/PLAT-SP-6
+Seen branch in repository origin1/feature/PLAT-Update-Wallet-Properties
+Seen branch in repository origin1/feature/PLAT-Wallet-Configs
+Seen branch in repository origin1/feature/SSP-SA-Integration
+Seen branch in repository origin1/feature/SSP-SA-Integration-M
+Seen branch in repository origin1/feature/couch-url-update
+Seen branch in repository origin1/feature/pos-to-cake-fixes
+Seen branch in repository origin1/feature/pulse-integration-usermanagement
+Seen branch in repository origin1/master
+Seen branch in repository origin1/release/CLR-6.47.0.0
+Seen branch in repository origin1/release/CLR-6.51.1.0
+Seen branch in repository origin1/release/LR-6.24.3.0
+Seen branch in repository origin1/release/LR-6.24.3.0-Kalinga
+Seen branch in repository origin1/release/PLAT-1-15
+Seen branch in repository origin1/release/PLAT-1-9
+Seen branch in repository origin1/release/PLAT-Sprint-18-Payment-accommodation
+Seen branch in repository origin1/sprint/cinco/6.24.0.0/develop
+Seen branch in repository origin1/task/POS-1319-update-users-permissions-mapi
+Seen branch in repository origin1/task/POS-1323-create-user-old-merchant-mapi
+Seen branch in repository origin1/task/POS-1624-mapi-pubhubsub-refactor-subscriber
+Seen branch in repository origin1/task/POS-2395-add-extra-query-parameter
+Seen branch in repository origin1/task/POS-822-test-config
+Seen branch in repository origin1/task/update-job-assignments-on-user-update
+Seen 132 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision d4ec01ad5f3a19ec598eedac52b91dfdf82135e0 (MAPI/master, origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d4ec01ad5f3a19ec598eedac52b91dfdf82135e0
+Commit message: "Trigger Check"
+ > git rev-list --no-walk d4ec01ad5f3a19ec598eedac52b91dfdf82135e0 # timeout=10
+ > git rev-list --no-walk d4ec01ad5f3a19ec598eedac52b91dfdf82135e0 # timeout=10
+[S3] $ /bin/sh -xe /tmp/jenkins4712962552760411396.sh
+[S3] $ /bin/sh -xe /tmp/jenkins5645996719433825753.sh
+++ sed -e 's|origin/relman/ci-dev/||g'
+++ echo '"MAPI/master"'
++ git_branch_local='"MAPI/master"'
+++ sed -e 's|origin/||g'
+++ echo MAPI/master
++ git_branch_remote=MAPI/master
++ echo git_branch_remote=MAPI/master
+++ jq --raw-output '."ci-dev"."MAPI/master".version'
+++ cat relman/jobs.json
+cat: relman/jobs.json: No such file or directory
++ version=
+++ jq --raw-output '."ci-dev"."MAPI/master".environment'
+++ cat relman/jobs.json
+cat: relman/jobs.json: No such file or directory
++ env=
++ echo version=
++ echo env=
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[S3] $ /bin/sh -xe /tmp/jenkins2748263127131982790.sh
+[PostBuildScript] - Executing post build scripts.
+[S3] $ /bin/sh -xe /tmp/jenkins2885774646369055079.sh
+Finished: SUCCESS

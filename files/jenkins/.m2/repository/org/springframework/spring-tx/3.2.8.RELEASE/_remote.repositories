@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Jun 04 05:49:31 UTC 2018
+spring-tx-3.2.8.RELEASE.jar>central=
+spring-tx-3.2.8.RELEASE.pom>central=
+spring-tx-3.2.8.RELEASE.pom>org.springframework.maven.milestone=
+spring-tx-3.2.8.RELEASE.pom>spring-release=

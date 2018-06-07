@@ -1,0 +1,51 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/S3
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git init /var/lib/jenkins/workspace/S3 # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision d4ec01ad5f3a19ec598eedac52b91dfdf82135e0 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d4ec01ad5f3a19ec598eedac52b91dfdf82135e0
+Commit message: "Trigger Check"
+First time build. Skipping changelog.
+[S3] $ /bin/sh -xe /tmp/jenkins3100943208113990295.sh
+[S3] $ /bin/sh -xe /tmp/jenkins6498305237926708543.sh
+++ sed -e 's|origin/relman/ci-dev/||g'
+++ echo '"origin/master"'
++ git_branch_local='"origin/master"'
+++ sed -e 's|origin/||g'
+++ echo origin/master
++ git_branch_remote=master
++ echo git_branch_remote=master
+++ jq --raw-output '."ci-dev"."origin/master".version'
+++ cat relman/jobs.json
+cat: relman/jobs.json: No such file or directory
++ version=
+++ jq --raw-output '."ci-dev"."origin/master".environment'
+++ cat relman/jobs.json
+cat: relman/jobs.json: No such file or directory
++ env=
++ echo version=
++ echo env=
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[S3] $ /bin/sh -xe /tmp/jenkins60768682001469626.sh
+[PostBuildScript] - Executing post build scripts.
+[S3] $ /bin/sh -xe /tmp/jenkins6179272133384928726.sh
+Finished: SUCCESS
