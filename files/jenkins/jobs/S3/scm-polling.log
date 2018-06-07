@@ -1,4 +1,4 @@
-Started on Jun 7, 2018 8:51:00 AM
+Started on Jun 7, 2018 9:44:00 PM
 Polling SCM changes on master
 Using strategy: Default
 [poll] Last Built Revision: Revision d4ec01ad5f3a19ec598eedac52b91dfdf82135e0 (refs/remotes/origin/master)
@@ -13,7 +13,11 @@ Polling for changes in
 Seen branch in repository origin/CLR/7.18.1.0/develop
 Seen branch in repository origin/CLR/7.18.2.0/develop
 Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bar-speed-screen-v1
+Seen branch in repository origin/bar-speed-screen-v3
+Seen branch in repository origin/bar-speed-screen-v4
 Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci-dev/bar-speed-screen-v3
 Seen branch in repository origin/ci/ci-test2
 Seen branch in repository origin/ci/ci_test1
 Seen branch in repository origin/ci/ci_test2
@@ -25,10 +29,11 @@ Seen branch in repository origin/feature/ci-test2
 Seen branch in repository origin/feature/ci_test3
 Seen branch in repository origin/master
 Seen branch in repository origin/relman/ci-dev/bar-screen
+Seen branch in repository origin/relman/ci-dev/bar-speed-screen-v4
 Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
 Seen branch in repository origin/temp/POS-4780-changes
 Seen branch in repository origin/temp/plat-1-build
-Seen 18 remote branches
+Seen 23 remote branches
  > git show-ref --tags -d # timeout=10
-Done. Took 2 sec
+Done. Took 1.9 sec
 No changes

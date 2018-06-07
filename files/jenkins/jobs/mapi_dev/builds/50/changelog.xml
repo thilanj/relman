@@ -1,0 +1,55 @@
+commit 2bdbf1f41e3eb7021e1075f9d27b5336e85b1c3e
+tree 803292d72d8f4cbe2a1f1815e3bca223e95c58ad
+parent 323304728bfc5095f99fc0993d66ed7bb43ca8a0
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 03:02:27 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 03:02:27 +0530
+
+    test commit to trigger relman
+
+
+
+:100644 100644 b3eda081e630bf82bc649b4b99ed5819238fca1c 5438cecfc46309f865269120737e0757adb2d100 M	merchant-web/src/main/java/com/leapset/merchantapi/merchant/controller/ConfigController.java
+commit 323304728bfc5095f99fc0993d66ed7bb43ca8a0
+tree 736db24ac26f45a586b61d39df8c66afd56ea66c
+parent 28421e200c9a84a457e2c628be62c6fa6297ed70
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:57:18 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:57:18 +0530
+
+    test commit to trigger relman
+
+
+
+:100644 100644 5438cecfc46309f865269120737e0757adb2d100 b3eda081e630bf82bc649b4b99ed5819238fca1c M	merchant-web/src/main/java/com/leapset/merchantapi/merchant/controller/ConfigController.java
+commit 28421e200c9a84a457e2c628be62c6fa6297ed70
+tree 803292d72d8f4cbe2a1f1815e3bca223e95c58ad
+parent a043c92e89c03dcc946a99a458049e396e4ddcd3
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:55:25 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:55:25 +0530
+
+    test commit to trigger relman
+
+
+
+:100644 100644 f9ea853455d8eb42a8ddf6e0918776e23dfe41c7 5438cecfc46309f865269120737e0757adb2d100 M	merchant-web/src/main/java/com/leapset/merchantapi/merchant/controller/ConfigController.java
+commit a043c92e89c03dcc946a99a458049e396e4ddcd3
+tree 5e1cbefef8602cc72dd39e486f8b2341f1d9ef22
+parent 9c9703c029dbf1bd32b1acd6e5efb1dcfd607058
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:54:02 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:54:02 +0530
+
+    test commit to trigger relman
+
+
+
+:100644 100644 3e89790961170274cf79620a33932a81f1c0aa0c 1d1998e4783f5250e7ede9f2f3b0db7d2dffa34d M	relman/relman.conf
+commit 9c9703c029dbf1bd32b1acd6e5efb1dcfd607058
+tree 6f4724c05aea762d9d778ffed226d18d097a4be3
+parent 09ab1142b94c60127ff497ebb13090bf86572631
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:52:12 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:52:12 +0530
+
+    test commit to trigger relman
+
+
+
+:100644 100644 1d1998e4783f5250e7ede9f2f3b0db7d2dffa34d 3e89790961170274cf79620a33932a81f1c0aa0c M	relman/relman.conf

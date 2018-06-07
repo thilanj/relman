@@ -1,0 +1,355 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/mapi_dev
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git init /var/lib/jenkins/workspace/mapi_dev # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/master
+Seen branch in repository origin/relman/ci-dev/bar-screen
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen 18 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision fa5b7eb4d4af3f0db032236951530ab2a0144fbd (origin/relman/ci-dev/bar-screen)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fa5b7eb4d4af3f0db032236951530ab2a0144fbd
+Commit message: "Deployment Role"
+ > git rev-list --no-walk 790efa018579a607d4c2f800a412aee62f033600 # timeout=10
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins3183670950781537632.sh
++ sh relman/build.sh
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Merchant API Parent Pom
+[INFO] Merchant API - Core
+[INFO] Merchant API Web
+[INFO] Merchant API
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Merchant API Parent Pom 6.9.22.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ parent-pom ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Merchant API - Core 6.9.22.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/paypal-beans/2.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/paypal-beans/2.0.0-SNAPSHOT/maven-metadata.xml
+360/360 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/paypal-beans/2.0.0-SNAPSHOT/maven-metadata.xml (360 B at 0.4 KB/sec)
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/mqclient/1.2-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/mqclient/1.2-SNAPSHOT/maven-metadata.xml
+354/354 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/mqclient/1.2-SNAPSHOT/maven-metadata.xml (354 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+366/366 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml (366 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/crypto/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/crypto/1.1.0-SNAPSHOT/maven-metadata.xml
+354/354 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/crypto/1.1.0-SNAPSHOT/maven-metadata.xml (354 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/crypto/1.1.0-SNAPSHOT/crypto-1.1.0-20180516.082729-1.pom
+            Downloading: http://repo.bodar.com/com/leapset/crypto/1.1.0-SNAPSHOT/crypto-1.1.0-20180516.082729-1.pom
+            [WARNING] The POM for com.leapset:crypto:jar:1.1.0-20180516.082729-1 is missing, no dependency information available
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/wallet-beans/1.2.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/wallet-beans/1.2.0-SNAPSHOT/maven-metadata.xml
+357/357 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/wallet-beans/1.2.0-SNAPSHOT/maven-metadata.xml (357 B at 0.6 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/wallet-api/1.2.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/wallet-api/1.2.0-SNAPSHOT/maven-metadata.xml
+355/355 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/wallet-api/1.2.0-SNAPSHOT/maven-metadata.xml (355 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth-core/5.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/auth/leapset-auth-core/5.0.0-SNAPSHOT/maven-metadata.xml
+370/370 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth-core/5.0.0-SNAPSHOT/maven-metadata.xml (370 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth/5.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/auth/leapset-auth/5.0.0-SNAPSHOT/maven-metadata.xml
+365/365 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth/5.0.0-SNAPSHOT/maven-metadata.xml (365 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml
+366/366 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml (366 B at 1.0 KB/sec)
+                                    Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+361/361 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/maven-metadata.xml (361 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/sf-connector-lib-1.0.0-20180516.083339-1.pom
+            Downloading: http://repo.bodar.com/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/sf-connector-lib-1.0.0-20180516.083339-1.pom
+            [WARNING] The POM for net.cake:sf-connector-lib:jar:1.0.0-20180516.083339-1 is missing, no dependency information available
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth-core/6.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/auth/leapset-auth-core/6.0.0-SNAPSHOT/maven-metadata.xml
+370/370 B                           Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth-core/6.0.0-SNAPSHOT/maven-metadata.xml (370 B at 0.6 KB/sec)
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth/6.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/auth/leapset-auth/6.0.0-SNAPSHOT/maven-metadata.xml
+365/365 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth/6.0.0-SNAPSHOT/maven-metadata.xml (365 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+358/358 B                                       Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml (358 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml
+356/356 B                           Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml (356 B at 0.9 KB/sec)
+                        Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+365/365 B                                       Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml (365 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.9-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/rest/rest-client/6.0.0.9-SNAPSHOT/maven-metadata.xml
+367/367 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.9-SNAPSHOT/maven-metadata.xml (367 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/diagnostic-context-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/diagnostic-context-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+367/367 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/diagnostic-context-lib/1.0.0-SNAPSHOT/maven-metadata.xml (367 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/payment-beans/2.7.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/payment-beans/2.7.0-SNAPSHOT/maven-metadata.xml
+361/361 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/payment-beans/2.7.0-SNAPSHOT/maven-metadata.xml (361 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/common-core/5.4.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/common/common-core/5.4.0-SNAPSHOT/maven-metadata.xml
+366/366 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/common-core/5.4.0-SNAPSHOT/maven-metadata.xml (366 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/api-core/5.4.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/common/api-core/5.4.0-SNAPSHOT/maven-metadata.xml
+363/363 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/api-core/5.4.0-SNAPSHOT/maven-metadata.xml (363 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/admin-beans/5.0.1-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/admin-beans/5.0.1-SNAPSHOT/maven-metadata.xml
+359/359 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/admin-beans/5.0.1-SNAPSHOT/maven-metadata.xml (359 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/operator-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/operator-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+359/359 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/operator-beans/1.0.0-SNAPSHOT/maven-metadata.xml (359 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/operator-api/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/operator-api/1.0.0-SNAPSHOT/maven-metadata.xml
+357/357 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/operator-api/1.0.0-SNAPSHOT/maven-metadata.xml (357 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/leapset.repository/javapns/javapns/2.2/javapns-2.2.pom
+            Downloading: http://repo.bodar.com/javapns/javapns/2.2/javapns-2.2.pom
+            Downloading: http://repo.maven.apache.org/maven2/javapns/javapns/2.2/javapns-2.2.pom
+            Downloading: http://files.couchbase.com/maven2/javapns/javapns/2.2/javapns-2.2.pom
+            [WARNING] The POM for javapns:javapns:jar:2.2 is missing, no dependency information available
+Downloading: http://repo.leapset.com/archiva/repository/leapset.repository/com/google/android/gcm/gcm-server/1.0.2/gcm-server-1.0.2.pom
+            Downloading: http://repo.bodar.com/com/google/android/gcm/gcm-server/1.0.2/gcm-server-1.0.2.pom
+            Downloading: http://repo.maven.apache.org/maven2/com/google/android/gcm/gcm-server/1.0.2/gcm-server-1.0.2.pom
+            Downloading: http://files.couchbase.com/maven2/com/google/android/gcm/gcm-server/1.0.2/gcm-server-1.0.2.pom
+            [WARNING] The POM for com.google.android.gcm:gcm-server:jar:1.0.2 is missing, no dependency information available
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.8-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/rest/rest-client/6.0.0.8-SNAPSHOT/maven-metadata.xml
+366/366 B                           Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.8-SNAPSHOT/maven-metadata.xml (366 B at 0.7 KB/sec)
+Downloading: http://repo.bodar.com/net/cake/shard-api/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-api/1.1.0-SNAPSHOT/maven-metadata.xml
+354/354 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-api/1.1.0-SNAPSHOT/maven-metadata.xml (354 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/shard/1.1.0-SNAPSHOT/maven-metadata.xml
+350/350 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard/1.1.0-SNAPSHOT/maven-metadata.xml (350 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-core/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/shard-core/1.1.0-SNAPSHOT/maven-metadata.xml
+355/355 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-core/1.1.0-SNAPSHOT/maven-metadata.xml (355 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/3.4.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/leapset-beans/3.4.0-SNAPSHOT/maven-metadata.xml
+361/361 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/3.4.0-SNAPSHOT/maven-metadata.xml (361 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/core-api-test-utils/5.4.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/common/core-api-test-utils/5.4.0-SNAPSHOT/maven-metadata.xml
+374/374 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/core-api-test-utils/5.4.0-SNAPSHOT/maven-metadata.xml (374 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-test/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/shard-test/1.1.0-SNAPSHOT/maven-metadata.xml
+355/355 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-test/1.1.0-SNAPSHOT/maven-metadata.xml (355 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml
+361/361 B                                       Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml (361 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml
+362/362 B                                       Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml (362 B at 1.0 KB/sec)
+            [INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ merchant-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ merchant-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 36 resources
+[INFO] Copying 23 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ merchant-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 274 source files to /var/lib/jenkins/workspace/mapi_dev/merchant-core/target/classes
+[INFO] /var/lib/jenkins/workspace/mapi_dev/merchant-core/src/main/java/com/leapset/merchantapi/core/scheduler/MessageQueueReconnectScheduler.java: Some input files use or override a deprecated API.
+[INFO] /var/lib/jenkins/workspace/mapi_dev/merchant-core/src/main/java/com/leapset/merchantapi/core/scheduler/MessageQueueReconnectScheduler.java: Recompile with -Xlint:deprecation for details.
+[INFO] /var/lib/jenkins/workspace/mapi_dev/merchant-core/src/main/java/com/leapset/merchantapi/core/service/impl/OnboardManagerImpl.java: Some input files use unchecked or unsafe operations.
+[INFO] /var/lib/jenkins/workspace/mapi_dev/merchant-core/src/main/java/com/leapset/merchantapi/core/service/impl/OnboardManagerImpl.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ merchant-core ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ merchant-core ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ merchant-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ merchant-core ---
+[INFO] Building jar: /var/lib/jenkins/workspace/mapi_dev/merchant-core/target/merchant-core-6.9.22.2-SNAPSHOT.jar
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Merchant API Web 6.9.22.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/paypal-beans/2.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/mqclient/1.2-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/crypto/1.1.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/wallet-beans/1.2.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/auth/leapset-auth-core/6.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/rest/rest-client/6.0.0.9-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/diagnostic-context-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/payment-beans/2.7.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/common/common-core/5.4.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/admin-beans/5.0.1-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/operator-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/shard-api/1.1.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/shard-core/1.1.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/leapset-beans/3.4.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/common/core-api-test-utils/5.4.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/shard-test/1.1.0-SNAPSHOT/maven-metadata.xml
+            [INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ mapi ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ mapi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/mapi_dev/merchant-web/target/resources
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ mapi ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 30 source files to /var/lib/jenkins/workspace/mapi_dev/merchant-web/target/classes
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (default) @ mapi ---
+[WARNING] Parameter tasks is deprecated, use target instead
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ mapi ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ mapi ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ mapi ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [mapi] in [/var/lib/jenkins/workspace/mapi_dev/merchant-web/target/mapi]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/var/lib/jenkins/workspace/mapi_dev/merchant-web/src/main/webapp]
+[INFO] Webapp assembled in [682 msecs]
+[INFO] Building war: /var/lib/jenkins/workspace/mapi_dev/merchant-web/target/mapi.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Merchant API 6.9.22.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://maven.springframework.org/snapshot/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+                        [INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ merchant-api ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.5.3.201107060350:prepare-agent (pre-test) @ merchant-api ---
+[INFO] Skipping JaCoCo for project with packaging type 'pom'
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.5.3.201107060350:report (post-test) @ merchant-api ---
+[INFO] Skipping JaCoCo for project with packaging type 'pom'
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Merchant API Parent Pom ........................... SUCCESS [  0.325 s]
+[INFO] Merchant API - Core ............................... SUCCESS [ 38.147 s]
+[INFO] Merchant API Web .................................. SUCCESS [ 34.733 s]
+[INFO] Merchant API ...................................... SUCCESS [  0.645 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:14 min
+[INFO] Finished at: 2018-06-07T15:34:46+00:00
+[INFO] Final Memory: 39M/93M
+[INFO] ------------------------------------------------------------------------
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins700568115039500822.sh
+++ sed -e 's|origin/relman/ci-dev/||g'
+++ echo '"origin/relman/ci-dev/bar-screen"'
++ git_branch_local='"bar-screen"'
+++ sed -e 's|origin/||g'
+++ echo origin/relman/ci-dev/bar-screen
++ git_branch_remote=relman/ci-dev/bar-screen
++ echo git_branch_remote=relman/ci-dev/bar-screen
+++ jq --raw-output '."ci-dev"."bar-screen".version'
+++ cat relman/jobs.json
++ version=2.3.7
+++ jq --raw-output '."ci-dev"."bar-screen".environment'
+++ cat relman/jobs.json
++ env=pos1
+++ jq --raw-output '."ci-dev"."bar-screen".configRef'
+++ cat relman/jobs.json
++ configRef=c61291f260f5e0dc149926fd4bbabfba42b1d788
++ echo version=2.3.7
++ echo env=pos1
++ echo configRef=c61291f260f5e0dc149926fd4bbabfba42b1d788
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins3331309251553979029.sh
++ [[ -n c61291f260f5e0dc149926fd4bbabfba42b1d788 ]]
++ echo 'Config Changes Detected'
+Config Changes Detected
++ cd relman
++ mkdir config
++ cd config
++ git clone https://thilanj:curdav3Q@stash.leapset.com/scm/ec/mapi.git
+Cloning into 'mapi'...
++ cd mapi
++ git checkout c61291f260f5e0dc149926fd4bbabfba42b1d788
+Note: checking out 'c61291f260f5e0dc149926fd4bbabfba42b1d788'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at c61291f... Merge pull request #1 in EC/mapi from CLR/7.18.1.0/develop to master
++ scp admin.properties apns.properties couch-cluster.properties couch.properties file-store.properties gcm.properties jdbc.properties job-api.properties lpg.properties mail.properties memcached.properties merchant-api.properties mws.properties paypal.properties profile-api.properties pub-sub-hub.properties pulse.properties rabbitmq.properties sandbox.properties shard.properties wallet.properties ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/config
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'cp /home/ec2-user/configs.server.xml_original /home/ec2-user/configs.server.xml'
+cp: cannot stat ‘/home/ec2-user/configs.server.xml_original’: No such file or directory
+Build step 'Execute shell' marked build as failure
+[PostBuildScript] - Executing post build scripts.
+[PostBuildScript] - Build does not have any of the results [SUCCESS]. Did not execute build step #0.
+Finished: FAILURE

@@ -10,7 +10,11 @@
     </entry>
     <entry>
       <string>mapi_dev</string>
-      <ranges>1-27</ranges>
+      <ranges>1-51</ranges>
+    </entry>
+    <entry>
+      <string>test</string>
+      <ranges>1-2</ranges>
     </entry>
   </usages>
   <facets/>

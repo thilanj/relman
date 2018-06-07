@@ -1,0 +1,22 @@
+commit fa5b7eb4d4af3f0db032236951530ab2a0144fbd
+tree e4899478ea21c66a2b4f5224ccb4c82ecc2cf517
+parent dd744fca3f8f72b5ffaac607fac58c267cbcdfbf
+author Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-07 21:00:07 +0530
+committer Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-07 21:00:07 +0530
+
+    Deployment Role
+
+
+
+:100644 100644 21e56af1de06b2f99fd670d104e3114093014e16 176f31a08c80ae8d09d60520850736816c7439e3 M	relman/deployment_role.yaml
+commit dd744fca3f8f72b5ffaac607fac58c267cbcdfbf
+tree 77578b9e7021b2676a614b356373606265d89e70
+parent 790efa018579a607d4c2f800a412aee62f033600
+author Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-07 18:29:15 +0530
+committer Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-07 18:29:15 +0530
+
+    version
+
+
+
+:100644 100644 9d68f9aa71d3b5a96bc965eebec289e59f6e91c1 bfb451627e73dca74407fe4762b21366e571bf80 M	relman/jobs.json
