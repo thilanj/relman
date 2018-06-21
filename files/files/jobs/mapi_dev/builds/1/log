@@ -1,0 +1,45 @@
+Started by an SCM change
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/mapi_dev
+Cloning the remote Git repository
+Cloning repository https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git init /var/lib/jenkins/workspace/mapi_dev # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision d4ec01ad5f3a19ec598eedac52b91dfdf82135e0 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d4ec01ad5f3a19ec598eedac52b91dfdf82135e0
+Commit message: "Trigger Check"
+First time build. Skipping changelog.
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins4201290058636033998.sh
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins8710319376885270553.sh
+++ sed -e 's|origin/ci/||g'
+++ echo origin/master
++ git_branch_local=origin/master
+++ sed -e 's|origin/||g'
+++ echo origin/master
++ git_branch=master
+++ jq --raw-output .ci_jobs.origin/master.version
+jq: error: master/0 is not defined at <top-level>, line 1:
+.ci_jobs.origin/master.version                
+++ cat relman/jobs.json
+cat: relman/jobs.json: No such file or directory
+jq: 1 compile error
++ version=
+Build step 'Execute shell' marked build as failure
+Publish artifacts to S3 Bucket Build is still running
+Publish artifacts to S3 Bucket Using S3 profile: relman
+Publish artifacts to S3 Bucket Skipping publishing on S3 because build failed
+[PostBuildScript] - Executing post build scripts.
+[PostBuildScript] - Build does not have any of the results [SUCCESS]. Did not execute build step #0.
+Finished: FAILURE

@@ -1,0 +1,14 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jvnet.hudson.plugins.SSHBuildWrapper_-DescriptorImpl plugin="ssh@2.6.1">
+  <sites>
+    <org.jvnet.hudson.plugins.CredentialsSSHSite>
+      <hostname>ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com</hostname>
+      <username>ec2-user</username>
+      <port>22</port>
+      <credentialId>37d6754d-be3f-4882-85e6-39452becb780</credentialId>
+      <serverAliveInterval>0</serverAliveInterval>
+      <timeout>0</timeout>
+      <pty>false</pty>
+    </org.jvnet.hudson.plugins.CredentialsSSHSite>
+  </sites>
+</org.jvnet.hudson.plugins.SSHBuildWrapper_-DescriptorImpl>

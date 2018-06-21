@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata>
+  <groupId>net.cake</groupId>
+  <artifactId>operator-api</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>1</buildNumber>
+      <timestamp>20180515.073142</timestamp>
+    </snapshot>
+    <lastUpdated>20180515073142</lastUpdated>
+  </versioning>
+</metadata>

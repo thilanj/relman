@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<be.certipost.hudson.plugin.SCPRepositoryPublisher_-DescriptorImpl plugin="scp@1.8">
+  <sites>
+    <be.certipost.hudson.plugin.SCPSite>
+      <hostname>ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com</hostname>
+      <port>22</port>
+      <username>jenkins</username>
+      <password></password>
+      <keyfile></keyfile>
+      <rootRepositoryPath></rootRepositoryPath>
+    </be.certipost.hudson.plugin.SCPSite>
+  </sites>
+</be.certipost.hudson.plugin.SCPRepositoryPublisher_-DescriptorImpl>

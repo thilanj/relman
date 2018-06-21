@@ -1,0 +1,118 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://stash.leapset.com/scm/~chamathb/merchant_api.git</url>
+        <credentialsId>f30e70d3-5a2f-41c1-8a7f-9d3b6a107bc0</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/relman/ci-dev/*/*</name>
+      </hudson.plugins.git.BranchSpec>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/relman/ci-dev/*</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.SCMTrigger>
+      <spec>* * * * *</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>sh .relman/build.sh</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>git_branch_local=$(echo &apos;&quot;&apos;$GIT_BRANCH&apos;&quot;&apos; | sed -e &quot;s|origin/relman/ci-dev/||g&quot;)
+git_branch_remote=$(echo $GIT_BRANCH | sed -e &quot;s|origin/||g&quot;)
+echo &quot;git_branch_remote=$git_branch_remote&quot; &gt; build.properties
+version=$(cat .relman/jobs.json | jq --raw-output &apos;.&quot;&apos;ci-dev&apos;&quot;.&apos;$git_branch_local&apos;.version&apos;)
+#env=$(cat relman/jobs.json | jq --raw-output &quot;.ci_jobs.$git_branch_local.environment&quot;)
+env=$(cat .relman/jobs.json | jq --raw-output &apos;.&quot;&apos;ci-dev&apos;&quot;.&apos;$git_branch_local&apos;.environment&apos;)
+configRef=$(cat .relman/jobs.json | jq --raw-output &apos;.&quot;&apos;ci-dev&apos;&quot;.&apos;$git_branch_local&apos;.configRef&apos;)
+configGit=$(cat .relman/relman.conf | jq --raw-output &apos;.component.configRepo&apos;)
+echo &quot;version=$version&quot; &gt;&gt; build.properties
+echo &quot;env=$env&quot; &gt;&gt; build.properties
+echo &quot;configRef=$configRef&quot; &gt;&gt; build.properties
+echo &quot;configGit=$configGit&quot; &gt;&gt; build.properties
+
+
+
+#echo file=mapi_$version-${BUILD_NUMBER}.war &gt;&gt; build.properties
+#mv merchant-web/target/mapi.war merchant-web/target/mapi_$version-${BUILD_NUMBER}.war</command>
+    </hudson.tasks.Shell>
+    <EnvInjectBuilder plugin="envinject@2.1.5">
+      <info>
+        <propertiesFilePath>build.properties</propertiesFilePath>
+      </info>
+    </EnvInjectBuilder>
+    <hudson.tasks.Shell>
+      <command>if [[ -n &quot;$configRef&quot; ]]
+then
+    echo &quot;Config Changes Detected&quot;;
+    cd .relman;
+    mkdir config;
+    cd config;
+    git clone $configGit;
+    cd mapi;
+    echo $configRepo;
+    git checkout $configRef;
+    scp * ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/config;
+    ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com &quot;cp /home/ec2-user/configs/server.xml_original /home/ec2-user/configs/server.xml&quot;
+    ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com &quot;ansible-playbook configprocessor.yaml --extra-vars &apos;env=$env path=/home/ec2-user/configs&apos;&quot;
+    ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com &quot;ansible-playbook configprocessor.yaml --extra-vars &apos;env=$env path=/home/ec2-user/merchant_api/config&apos;&quot;
+    cd ../../;
+    rm -rf config;
+else
+    echo &quot;No config changes detected&quot;
+fi
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>scp merchant-web/target/*.war ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/
+scp .relman/deploy.yml ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <org.jenkinsci.plugins.postbuildscript.PostBuildScript plugin="postbuildscript@2.7.0">
+      <config>
+        <scriptFiles/>
+        <groovyScripts/>
+        <buildSteps>
+          <org.jenkinsci.plugins.postbuildscript.model.PostBuildStep>
+            <results>
+              <string>SUCCESS</string>
+            </results>
+            <role>BOTH</role>
+            <executeOn>BOTH</executeOn>
+            <buildSteps>
+              <hudson.tasks.Shell>
+                <command>ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com &quot;ansible-playbook merchant_api/deploy.yml --extra-vars &apos;variable_host=$env&apos;&quot;</command>
+              </hudson.tasks.Shell>
+            </buildSteps>
+          </org.jenkinsci.plugins.postbuildscript.model.PostBuildStep>
+        </buildSteps>
+        <markBuildUnstable>false</markBuildUnstable>
+      </config>
+    </org.jenkinsci.plugins.postbuildscript.PostBuildScript>
+  </publishers>
+  <buildWrappers/>
+</project>

@@ -1,0 +1,65 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/mapi_dev
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/master
+Seen branch in repository origin/relman/ci-dev/bar-screen
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen 18 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 20a62667c1a28af4f61018fddd85f00c29c5689c (origin/relman/ci-dev/bar-screen)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 20a62667c1a28af4f61018fddd85f00c29c5689c
+Commit message: "version"
+ > git rev-list --no-walk 20a62667c1a28af4f61018fddd85f00c29c5689c # timeout=10
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins8588770517138835894.sh
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins6149730307592611384.sh
+++ sed -e 's|origin/relman/ci-dev/||g'
+++ echo '"origin/relman/ci-dev/bar-screen"'
++ git_branch_local='"bar-screen"'
+++ sed -e 's|origin/||g'
+++ echo origin/relman/ci-dev/bar-screen
++ git_branch_remote=relman/ci-dev/bar-screen
++ echo git_branch_remote=relman/ci-dev/bar-screen
+++ jq --raw-output '."ci-dev"."bar-screen".version'
+++ cat relman/jobs.json
++ version=2.3.7
+++ jq --raw-output '."ci-dev"."bar-screen".environment'
+++ cat relman/jobs.json
++ env=pos1
+++ jq --raw-output '."ci-dev"."bar-screen".configRef'
+++ cat relman/jobs.json
++ configRef=59a741a9bc7f0abf7d9f8797cc94d6110abc2b26
++ echo version=2.3.7
++ echo env=pos1
++ echo configRef=59a741a9bc7f0abf7d9f8797cc94d6110abc2b26
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins8411622901695861063.sh
+/tmp/jenkins8411622901695861063.sh: line 5: syntax error near unexpected token `then'
+Build step 'Execute shell' marked build as failure
+[PostBuildScript] - Executing post build scripts.
+[PostBuildScript] - Build does not have any of the results [SUCCESS]. Did not execute build step #0.
+Finished: FAILURE

@@ -1,0 +1,107 @@
+Started by an SCM change
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/S3
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git init /var/lib/jenkins/workspace/S3 # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/CDA-12-as-and-engineer-i-want-to-complete-relman-cli-tool
+Seen branch in repository origin/CDA-3-as-an-engineer-i-need-to-r-d-on-config-infrastructure-management-tools
+Seen branch in repository origin/CDA-6-as-an-engineer-i-need-to-configure-artifact-repository
+Seen branch in repository origin/CDA-8-as-an-engineer-i-need-to-configure-relman-repository
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bar-speed-screen-v1
+Seen branch in repository origin/bar-speed-screen-v3
+Seen branch in repository origin/bar-speed-screen-v4
+Seen branch in repository origin/blueocean
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci-dev/bar-speed-screen-v3
+Seen branch in repository origin/ci-foo
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CDA-12-as-and-engineer-i-want-to-complete-relman-cli-tool
+Seen branch in repository origin/feature/CDA-15-relman-testing
+Seen branch in repository origin/feature/CDA-6-as-an-engineer-i-need-to-configure-artifact-repository
+Seen branch in repository origin/feature/CDA-7-as-an-engineer-i-need-to-configure-config-repository
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/hotfix/CDA-3-as-an-engineer-i-need-to-r-d-on-config-infrastructure-management-tools
+Seen branch in repository origin/master
+Seen branch in repository origin/relman/ci-dev/CDA-12-as-and-engineer-i-want-to-complete-relman-cli-tool
+Seen branch in repository origin/relman/ci-dev/CDA-3-as-an-engineer-i-need-to-r-d-on-config-infrastructure-management-tools
+Seen branch in repository origin/relman/ci-dev/CDA-6-as-an-engineer-i-need-to-configure-artifact-repository
+Seen branch in repository origin/relman/ci-dev/CDA-8-as-an-engineer-i-need-to-configure-relman-repository
+Seen branch in repository origin/relman/ci-dev/bar-screen
+Seen branch in repository origin/relman/ci-dev/bar-speed-screen-v4
+Seen branch in repository origin/relman/ci-dev/ci-foo
+Seen branch in repository origin/relman/ci-dev/feature/CDA-12-as-and-engineer-i-want-to-complete-relman-cli-tool
+Seen branch in repository origin/relman/ci-dev/feature/CDA-15-relman-testing
+Seen branch in repository origin/relman/ci-dev/feature/CDA-7-as-an-engineer-i-need-to-configure-config-repository
+Seen branch in repository origin/relman/ci-dev/hotfix/CDA-3-as-an-engineer-i-need-to-r-d-on-config-infrastructure-management-tools
+Seen branch in repository origin/relman/ci-dev/test-chama
+Seen branch in repository origin/relman/ci-dev/test-chamath2
+Seen branch in repository origin/relman/ci-dev/test-relman
+Seen branch in repository origin/relman/ci-dev/test/test-demo
+Seen branch in repository origin/relman/ci-dev/thilan-jay
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen branch in repository origin/test-chama
+Seen branch in repository origin/test-chamath2
+Seen branch in repository origin/test-relman
+Seen branch in repository origin/test/demo_branch
+Seen branch in repository origin/test/test-demo
+Seen branch in repository origin/thilan-jay
+Seen 54 remote branches
+ > git show-ref --tags -d # timeout=10
+Multiple candidate revisions
+Scheduling another build to catch up with S3
+Checking out Revision c86c2e35cac1cd662dd26b54685dcc31bd9db45c (origin/relman/ci-dev/test-relman)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c86c2e35cac1cd662dd26b54685dcc31bd9db45c
+Commit message: "(relman) config changed"
+First time build. Skipping changelog.
+[S3] $ /bin/sh -xe /tmp/jenkins6218373776105873788.sh
+[S3] $ /bin/sh -xe /tmp/jenkins4092173162076346961.sh
+++ sed -e 's|origin/relman/ci-dev/||g'
+++ echo '"origin/relman/ci-dev/test-relman"'
++ git_branch_local='"test-relman"'
+++ sed -e 's|origin/||g'
+++ echo origin/relman/ci-dev/test-relman
++ git_branch_remote=relman/ci-dev/test-relman
++ echo git_branch_remote=relman/ci-dev/test-relman
+++ jq --raw-output '."ci-dev"."test-relman".version'
+++ cat relman/jobs.json
+cat: relman/jobs.json: No such file or directory
++ version=
+++ jq --raw-output '."ci-dev"."test-relman".environment'
+++ cat relman/jobs.json
+cat: relman/jobs.json: No such file or directory
++ env=
++ echo version=
++ echo env=
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[S3] $ /bin/sh -xe /tmp/jenkins7038904312772563339.sh
+[PostBuildScript] - Executing post build scripts.
+[S3] $ /bin/sh -xe /tmp/jenkins3237079422724086075.sh
+Finished: SUCCESS

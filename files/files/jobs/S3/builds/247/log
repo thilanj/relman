@@ -1,0 +1,56 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/S3
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci-test4
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci-test3
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/master
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen 19 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 297c628316ec588fbdab070c3514223594a39a15 (origin/ci/ci_test3)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 297c628316ec588fbdab070c3514223594a39a15
+Commit message: "Merge pull request #7 in ~CHAMATHB/merchant_api from feature/ci_test3 to ci/ci_test3"
+ > git rev-list --no-walk 297c628316ec588fbdab070c3514223594a39a15 # timeout=10
+[S3] $ /bin/sh -xe /tmp/jenkins5671638424597375559.sh
+[S3] $ /bin/sh -xe /tmp/jenkins3743395097745043916.sh
+++ sed -e 's|origin/ci/||g'
+++ echo origin/ci/ci_test3
++ git_branch_local=ci_test3
+++ sed -e 's|origin/||g'
+++ echo origin/ci/ci_test3
++ git_branch_remote=ci/ci_test3
++ echo git_branch_remote=ci/ci_test3
+++ jq --raw-output .ci_jobs.ci_test3.version
+++ cat relman/jobs.json
++ version=3.2
+++ jq --raw-output .ci_jobs.ci_test3.environment
+++ cat relman/jobs.json
++ env=pos1
+/tmp/jenkins3743395097745043916.sh: line 9: unexpected EOF while looking for matching `"'
+Build step 'Execute shell' marked build as failure
+[PostBuildScript] - Executing post build scripts.
+[PostBuildScript] - Build does not have any of the results [SUCCESS]. Did not execute build step #0.
+Finished: FAILURE

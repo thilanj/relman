@@ -1,0 +1,11 @@
+commit 676a3c4ee81e82156342675a3aa89982f237e1f1
+tree e6e52f687d12cc574042191a326839bcb5663db9
+parent 33178ba6785f4fa6a596f2473839d745c4dad773
+author Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-06 19:39:10 +0530
+committer Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-06 19:39:10 +0530
+
+    Test exclude
+
+
+
+:100644 100644 a97148b9c4fcfffda2f75f67b0dcd278b75146cf 6ef3837393e0e03d81eeea5caf00ed0568542137 M	relman/jobs.json

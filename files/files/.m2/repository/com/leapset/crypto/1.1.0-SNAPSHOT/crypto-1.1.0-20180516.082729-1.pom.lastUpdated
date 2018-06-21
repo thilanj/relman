@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Jun 21 10:58:28 UTC 2018
+http\://repo.leapset.com/archiva/repository/snapshot/.error=
+http\://repo.bodar.com/.error=
+http\://repo.leapset.com/archiva/repository/snapshot/.lastUpdated=1529578708013
+http\://repo.bodar.com/.lastUpdated=1529578708543

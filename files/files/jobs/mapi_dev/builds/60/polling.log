@@ -1,0 +1,49 @@
+Started on Jun 12, 2018 10:23:00 AM
+Polling SCM changes on master
+Using strategy: Default
+[poll] Last Built Revision: Revision c7725fd2d4b4029755eb35a92165cc4aeed79701 (origin/relman/ci-dev/test-chamath2)
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repositories
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Polling for changes in
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bar-speed-screen-v1
+Seen branch in repository origin/bar-speed-screen-v3
+Seen branch in repository origin/bar-speed-screen-v4
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci-dev/bar-speed-screen-v3
+Seen branch in repository origin/ci-foo
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/master
+Seen branch in repository origin/relman/ci-dev/bar-screen
+Seen branch in repository origin/relman/ci-dev/bar-speed-screen-v4
+Seen branch in repository origin/relman/ci-dev/ci-foo
+Seen branch in repository origin/relman/ci-dev/test-chamath2
+Seen branch in repository origin/relman/ci-dev/test/test-demo
+Seen branch in repository origin/relman/ci-dev/thilan-jay
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen branch in repository origin/test-chamath2
+Seen branch in repository origin/test/demo_branch
+Seen branch in repository origin/test/test-demo
+Seen branch in repository origin/thilan-jay
+Seen 32 remote branches
+ > git show-ref --tags -d # timeout=10
+ > git log --full-history --no-abbrev --format=raw -M -m c7725fd2d4b4029755eb35a92165cc4aeed79701..2ca14f27728827008f2d4c243b95fb1280cd6d24 # timeout=10
+Done. Took 1.9 sec
+Changes found

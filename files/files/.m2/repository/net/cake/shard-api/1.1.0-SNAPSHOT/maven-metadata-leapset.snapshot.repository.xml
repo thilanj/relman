@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata>
+  <groupId>net.cake</groupId>
+  <artifactId>shard-api</artifactId>
+  <version>1.1.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>3</buildNumber>
+      <timestamp>20180514.094053</timestamp>
+    </snapshot>
+    <lastUpdated>20180514094053</lastUpdated>
+  </versioning>
+</metadata>

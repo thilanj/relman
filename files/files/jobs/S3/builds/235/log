@@ -1,0 +1,102 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/S3
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci-test4
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci-test3
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/master
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen 19 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 9f13ac8eb13fe39475bc6667bec62fef266513e2 (origin/ci/ci_test3)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9f13ac8eb13fe39475bc6667bec62fef266513e2
+Commit message: "Merge pull request #5 in ~CHAMATHB/merchant_api from feature/ci_test3 to ci/ci_test3"
+ > git rev-list --no-walk 5519cd1ff4d25a7d08e31b3860e2147da5cb7dab # timeout=10
+[S3] $ /bin/sh -xe /tmp/jenkins1421148073776079557.sh
+[S3] $ /bin/sh -xe /tmp/jenkins4264974805950984682.sh
+++ sed -e 's|origin/ci/||g'
+++ echo origin/ci/ci_test3
++ git_branch_local=ci_test3
+++ sed -e 's|origin/||g'
+++ echo origin/ci/ci_test3
++ git_branch_remote=ci/ci_test3
++ echo git_branch_remote=ci/ci_test3
+++ jq --raw-output .ci_jobs.ci_test3.version
+++ cat relman/jobs.json
++ version=3.2
+++ jq --raw-output .ci_jobs.ci_test3.environment
+++ cat relman/jobs.json
++ env=pos1
++ echo version=3.2
++ echo env=pos1
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[S3] $ /bin/sh -xe /tmp/jenkins6096836713280100697.sh
++ scp merchant-web/target/mapi.war ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/
++ scp relman/deployment_role.yaml ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/
+[SSH] script:
+env="pos1"
+
+ansible-playbook merchant_api/deployment_role.yaml --extra-vars "variable_host=$env-mapi"
+
+[SSH] executing...
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+ERROR! Syntax Error while loading YAML.
+  found character that cannot start any token
+
+The error appears to have been in '/home/ec2-user/merchant_api/deployment_role.yaml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      args:
+	executable: /bin/bash
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+
+[SSH] completed
+[SSH] exit-status: 4
+
+Build step 'Execute shell script on remote host using ssh' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,93 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/mapi_dev
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git init /var/lib/jenkins/workspace/mapi_dev # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/master
+Seen branch in repository origin/relman/ci-dev/bar-screen
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen 18 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision ea3b7654550a0570a3b78760bfab46dac301ac85 (origin/relman/ci-dev/bar-screen)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ea3b7654550a0570a3b78760bfab46dac301ac85
+Commit message: "Jobs"
+ > git rev-list --no-walk ea3b7654550a0570a3b78760bfab46dac301ac85 # timeout=10
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins2888238658625272350.sh
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins445621493953046049.sh
+++ sed -e 's|origin/relman/ci-dev/||g'
+++ echo '"origin/relman/ci-dev/bar-screen"'
++ git_branch_local='"bar-screen"'
+++ sed -e 's|origin/||g'
+++ echo origin/relman/ci-dev/bar-screen
++ git_branch_remote=relman/ci-dev/bar-screen
++ echo git_branch_remote=relman/ci-dev/bar-screen
+++ jq --raw-output '."ci-dev"."bar-screen".version'
+++ cat relman/jobs.json
++ version=2.3.7
+++ jq --raw-output '."ci-dev"."bar-screen".environment'
+++ cat relman/jobs.json
++ env=pos1
+++ jq --raw-output '."ci-dev"."bar-screen".configRef'
+++ cat relman/jobs.json
++ configRef=16b1480ca84d6ffb49d070f710a7f44466e1fe9b
++ echo version=2.3.7
++ echo env=pos1
++ echo configRef=16b1480ca84d6ffb49d070f710a7f44466e1fe9b
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins8827919889446665034.sh
++ [[ -n 16b1480ca84d6ffb49d070f710a7f44466e1fe9b ]]
++ echo 'not Empty'
+not Empty
++ cd relman
++ mkdir config
++ cd config
++ git clone https://thilanj:curdav3Q@stash.leapset.com/scm/ec/mapi.git
+Cloning into 'mapi'...
++ cd mapi
++ git checkout 16b1480ca84d6ffb49d070f710a7f44466e1fe9b
+Note: checking out '16b1480ca84d6ffb49d070f710a7f44466e1fe9b'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 16b1480... added deleted employee end point
+[PostBuildScript] - Executing post build scripts.
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins8998477571810979910.sh
+Finished: SUCCESS

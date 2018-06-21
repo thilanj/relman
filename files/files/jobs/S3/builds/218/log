@@ -1,0 +1,63 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/S3
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci-test4
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci-test3
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/master
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen 19 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 1fc6e5f119d78c42398133e3c943edce91d2d9f5 (origin/ci/ci_test3)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1fc6e5f119d78c42398133e3c943edce91d2d9f5
+Commit message: "Merge pull request #2 in ~CHAMATHB/merchant_api from feature/ci_test3 to ci/ci_test3"
+ > git rev-list --no-walk 1fc6e5f119d78c42398133e3c943edce91d2d9f5 # timeout=10
+[S3] $ /bin/sh -xe /tmp/jenkins5096838599732625156.sh
+[S3] $ /bin/sh -xe /tmp/jenkins7802473462170277813.sh
+++ sed -e 's|origin/ci/||g'
+++ echo origin/ci/ci_test3
++ git_branch_local=ci_test3
+++ sed -e 's|origin/||g'
+++ echo origin/ci/ci_test3
++ git_branch=ci/ci_test3
++ echo git_branch=ci/ci_test3
+++ jq --raw-output .ci_jobs.ci_test3.version
+++ cat relman/jobs.json
++ version=2.1
++ echo version=2.1
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[S3] $ /bin/sh -xe /tmp/jenkins1462819568128371627.sh
++ echo 2.1
+2.1
++ echo
+
+Publish artifacts to S3 Bucket Build is still running
+Publish artifacts to S3 Bucket Using S3 profile: relman
+Publish artifacts to S3 Bucket No file(s) found: merchant-web/target/mapi*
+[PostBuildScript] - Executing post build scripts.
+[S3] $ /bin/sh -xe /tmp/jenkins9146380721970669213.sh
+Finished: SUCCESS

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.cake</groupId>
+    <artifactId>shard</artifactId>
+    <version>1.1.0-SNAPSHOT</version>
+    <modules>
+        <module>core</module>
+        <module>api</module>
+        <module>test</module>
+    </modules>
+    <packaging>pom</packaging>
+    <name>CAKE Shard</name>
+
+    <repositories>
+        <repository>
+            <id>leapset.snapshot.repository</id>
+            <name>Archiva Managed Leapset SNAPSHOT Repository</name>
+            <url>http://repo.leapset.com/archiva/repository/snapshot/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>leapset.repository</id>
+            <url>http://repo.leapset.com/archiva/repository/leapset.repository/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>leapset.repository</id>
+            <url>http://repo.leapset.com/archiva/repository/leapset.repository/</url>
+        </repository>
+        <snapshotRepository>
+            <id>leapset.snapshot.repository</id>
+            <name>Archiva Managed Leapset SNAPSHOT Repository</name>
+            <url>http://repo.leapset.com/archiva/repository/snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leapset</groupId>
+            <artifactId>logger</artifactId>
+            <version>${leapset.logger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.kstyrc</groupId>
+            <artifactId>embedded-redis</artifactId>
+            <version>${embedded.redis.version}</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+
+        <!--Provided Properties-->
+        <redis.clients>2.8.0</redis.clients>
+        <slf4j.version>1.7.5</slf4j.version>
+        <leapset.logger.version>1.0</leapset.logger.version>
+        <faterxml.jackson>2.7.5</faterxml.jackson>
+        <commons.lang>2.6</commons.lang>
+        <commons.io>1.3.2</commons.io>
+
+        <atomikos.version>3.8.0</atomikos.version>
+        <spring.version>4.2.4.RELEASE</spring.version>
+        <mysqldriver.version>5.1.21</mysqldriver.version>
+
+        <!--TEST Properties-->
+        <testng.version>6.9.9</testng.version>
+        <leapset.beans>2.20.0-SNAPSHOT</leapset.beans>
+        <commons.dbcp.version>1.3</commons.dbcp.version>
+        <embedded.redis.version>0.6</embedded.redis.version>
+
+    </properties>
+
+</project>

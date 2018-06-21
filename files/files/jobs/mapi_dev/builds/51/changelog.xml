@@ -1,0 +1,14 @@
+commit 234fe9b1e5c3e86e250cd7921010d5cc531a53c7
+tree 10bad93ac052600aa2681de1a8a9262befb3bf69
+parent 2bdbf1f41e3eb7021e1075f9d27b5336e85b1c3e
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 03:11:45 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 03:11:45 +0530
+
+    test commit to trigger relman
+
+
+
+:100644 100644 865d91bd66157f99a95da9e1bfc079915cade9a8 865d91bd66157f99a95da9e1bfc079915cade9a8 R100	relman/build.sh	.relman/build.sh
+:100644 100644 05df80b4c80a36a092b8e22d4e1b045b5775dc21 05df80b4c80a36a092b8e22d4e1b045b5775dc21 R100	relman/deploy.yml	.relman/deploy.yml
+:100644 100644 0727a334705afe90e3c4908cb4e8dbd2d7104a29 0727a334705afe90e3c4908cb4e8dbd2d7104a29 R100	relman/jobs.json	.relman/jobs.json
+:100644 100644 1d1998e4783f5250e7ede9f2f3b0db7d2dffa34d 1d1998e4783f5250e7ede9f2f3b0db7d2dffa34d R100	relman/relman.conf	.relman/relman.conf

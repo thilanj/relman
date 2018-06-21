@@ -1,0 +1,11 @@
+commit 0ff2d9648cb1303f6f9844c3a02b0a9b2cf1e8d5
+tree 0ff27fc92569b0656b568eb91379933615bdc040
+parent 27e77613826bffd73a87f39833db3de0e61efa4d
+author Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-07 22:34:51 +0530
+committer Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-07 22:34:51 +0530
+
+    DP
+
+
+
+:100644 100644 27130054a3a8f68b104919b7703b0bd532fbc62d 53623f081f90b397addc5288fb219c347b777f43 M	relman/deployment_role.yaml

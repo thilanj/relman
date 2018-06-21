@@ -1,0 +1,11 @@
+commit 7965c1abdedd78880e4fe591ed96f90c9112f373
+tree 2abc88c4f4d865d5f2b48c2863cf3259f50f6fe0
+parent cdc9d9a311f95ec1369903f6758c2c3985b17825
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:38:17 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-08 02:38:17 +0530
+
+    test commit to trigger relman
+
+
+
+:100644 100644 6434cd31f8414b9c624ae395fe092e070fc893f7 f0dc449c53aa6af17c76db2c1a88f38e7f7631db M	merchant-web/src/main/java/com/leapset/merchantapi/merchant/controller/InitializeController.java

@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.thetransactioncompany</groupId>
+	<artifactId>java-property-utils</artifactId>
+	<version>1.6</version>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
+	<name>Java Property Utility</name>
+	<description>
+		This package provides a Java utility for typed retrieval of java.util.Properties
+		as boolean, integer, floating point, string and enum values.
+	</description>
+	<inceptionYear>2010</inceptionYear>
+
+	<organization>
+		<name>The Transaction Company</name>
+		<url>http://software.dzhuvinov.com</url>
+	</organization>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<contributors>
+		<contributor>
+			<name>Vladimir Dzhuvinov</name>
+			<email>vladimir@dzhuvinov.com</email>
+			<roles>
+				<role>maintainer</role>
+			</roles>
+		</contributor>
+		<contributor>
+			<name>Joost Cassee</name>
+			<email>joost@cassee.net</email>
+			<roles>
+				<role>packager</role>
+			</roles>
+		</contributor>
+	</contributors>
+
+	<scm>
+		<url>https://bitbucket.org/vdzhuvinov/java-property-utils</url>
+		<connection>scm:git:https://bitbucket.org/vdzhuvinov/java-property-utils.git</connection>
+		<developerConnection>scm:git:git://git@bitbucket.org/vdzhuvinov/java-property-utils.git</developerConnection>
+	</scm>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
