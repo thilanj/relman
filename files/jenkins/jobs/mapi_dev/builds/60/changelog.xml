@@ -1,0 +1,22 @@
+commit 2ca14f27728827008f2d4c243b95fb1280cd6d24
+tree f2f557adf152de0de1d1a381e97baf85a932f80c
+parent 663181a3bd6aae8a12af3b8501986777eceedf17
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-12 15:41:23 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-12 15:41:23 +0530
+
+    test commit2
+
+
+
+:100644 100644 a2d601abfff039a0c0ddf531fd8520a5d9abd32f 285222493189530820cdffb7a3695284197e9bdd M	merchant-web/src/main/java/com/leapset/merchantapi/merchant/controller/ConfigController.java
+commit 663181a3bd6aae8a12af3b8501986777eceedf17
+tree be7fb9b3fddd2310c74eae155ac886c827c8635f
+parent c7725fd2d4b4029755eb35a92165cc4aeed79701
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-12 15:39:03 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-12 15:39:03 +0530
+
+    test commit
+
+
+
+:100644 100644 142bab27305d4ea9fd307dc982be693ac1ef7004 a2d601abfff039a0c0ddf531fd8520a5d9abd32f M	merchant-web/src/main/java/com/leapset/merchantapi/merchant/controller/ConfigController.java

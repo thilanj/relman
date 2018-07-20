@@ -1,0 +1,11 @@
+commit 25eaeda648c03902729edeff605130b3318ce097
+tree 0f97ff1e296c1553cc2a5d45ebc53f94e9aaada3
+parent 4fca2cf1ac3b40366cf7feb1c241f9a0166d7f1b
+author Thilan J <thilan.jayasundera@sysco.com> 2018-06-26 17:04:47 +0530
+committer Thilan J <thilan.jayasundera@sysco.com> 2018-06-26 17:04:47 +0530
+
+    (relman) config changed
+
+
+
+:100644 100644 7e4d3ab7c14075abf1f4372820f2d727bc902e92 92ffebc329ec364d00f2b2597dcb5f81e722af3a M	.relman/jobs.json

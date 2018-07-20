@@ -1,0 +1,126 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/deploy
+[deploy] $ /bin/sh -xe /tmp/jenkins8936661832611274751.sh
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook configprocessor.yaml --extra-vars '\''env=TST1 path=deployment/component/configs/mapi/'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [127.0.0.1] ***************************************************************
+
+TASK [Get a list of conf in /configs] ******************************************
+ok: [127.0.0.1]
+
+TASK [Replace strings in files found] ******************************************
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913000.3452332, u'inode': 266771, u'isgid': False, u'size': 180, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/pulse.properties', u'xusr': False, u'atime': 1531913000.3452332, u'isdir': False, u'ctime': 1531913000.3492332, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913000.4812317, u'inode': 266772, u'isgid': False, u'size': 270, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/couch-cluster.properties', u'xusr': False, u'atime': 1531913000.4812317, u'isdir': False, u'ctime': 1531913000.4812317, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913000.6132305, u'inode': 266773, u'isgid': False, u'size': 653, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/paypal.properties', u'xusr': False, u'atime': 1531913000.6132305, u'isdir': False, u'ctime': 1531913000.6172304, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913000.749229, u'inode': 266774, u'isgid': False, u'size': 183, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/couch.properties', u'xusr': False, u'atime': 1531913000.749229, u'isdir': False, u'ctime': 1531913000.753229, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913000.8852274, u'inode': 266775, u'isgid': False, u'size': 801, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/rabbitmq.properties', u'xusr': False, u'atime': 1531913000.8852274, u'isdir': False, u'ctime': 1531913000.8892276, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913001.0212262, u'inode': 266776, u'isgid': False, u'size': 1029, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/mail.properties', u'xusr': False, u'atime': 1531913001.0212262, u'isdir': False, u'ctime': 1531913001.0212262, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145572, u'isgid': False, u'size': 76, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/gcm.properties', u'xusr': False, u'atime': 1531912998.8652484, u'isdir': False, u'ctime': 1531912998.8652484, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913001.2812235, u'inode': 266777, u'isgid': False, u'size': 399, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/sandbox.properties', u'xusr': False, u'atime': 1531913001.2812235, u'isdir': False, u'ctime': 1531913001.2852235, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145509, u'isgid': False, u'size': 196, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/lpg.properties', u'xusr': False, u'atime': 1531912998.8612485, u'isdir': False, u'ctime': 1531912998.8612485, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913001.541221, u'inode': 266778, u'isgid': False, u'size': 4216, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/jdbc.properties', u'xusr': False, u'atime': 1531913001.541221, u'isdir': False, u'ctime': 1531913001.5452209, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913001.6772194, u'inode': 266779, u'isgid': False, u'size': 717, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/wallet.properties', u'xusr': False, u'atime': 1531913001.6772194, u'isdir': False, u'ctime': 1531913001.6772194, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145566, u'isgid': False, u'size': 33, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/mws.properties', u'xusr': False, u'atime': 1531912998.8652484, u'isdir': False, u'ctime': 1531912998.8652484, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913001.9372168, u'inode': 266780, u'isgid': False, u'size': 1174, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/shard.properties', u'xusr': False, u'atime': 1531913001.9372168, u'isdir': False, u'ctime': 1531913001.9372168, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913002.0732152, u'inode': 266781, u'isgid': False, u'size': 2257, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/merchant-api.properties', u'xusr': False, u'atime': 1531913002.0732152, u'isdir': False, u'ctime': 1531913002.0732152, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913002.205214, u'inode': 266782, u'isgid': False, u'size': 60, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/admin.properties', u'xusr': False, u'atime': 1531913002.205214, u'isdir': False, u'ctime': 1531913002.209214, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145514, u'isgid': False, u'size': 118, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/apns.properties', u'xusr': False, u'atime': 1531912998.8612485, u'isdir': False, u'ctime': 1531912998.8612485, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913002.4692113, u'inode': 266783, u'isgid': False, u'size': 775, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/profile-api.properties', u'xusr': False, u'atime': 1531913002.4692113, u'isdir': False, u'ctime': 1531913002.4692113, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913002.6052098, u'inode': 266784, u'isgid': False, u'size': 52, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/memcached.properties', u'xusr': False, u'atime': 1531913002.6052098, u'isdir': False, u'ctime': 1531913002.6052098, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913002.7372086, u'inode': 266785, u'isgid': False, u'size': 526, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/job-api.properties', u'xusr': False, u'atime': 1531913002.7372086, u'isdir': False, u'ctime': 1531913002.7412086, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913002.873207, u'inode': 266786, u'isgid': False, u'size': 200, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/file-store.properties', u'xusr': False, u'atime': 1531913002.873207, u'isdir': False, u'ctime': 1531913002.873207, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531913003.0092058, u'inode': 266787, u'isgid': False, u'size': 192, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/pub-sub-hub.properties', u'xusr': False, u'atime': 1531913003.0092058, u'isdir': False, u'ctime': 1531913003.0132058, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=0   
+
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook deploy.yaml --extra-vars '\''host_group=TST1 mapi=deployment/MAPI_4.5.6.yaml'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+[DEPRECATION WARNING]: Specifying include variables at the top-level of the 
+task is deprecated. Please see: 
+http://docs.ansible.com/ansible/playbooks_roles.html#task-include-files-and-
+encouraging-reuse   for currently supported syntax regarding included files and
+ variables. This feature will be removed in version 2.7. Deprecation warnings 
+can be disabled by setting deprecation_warnings=False in ansible.cfg.
+
+PLAY [TST1] ********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [tst1_replicator]
+ok: [tst1_mapi]
+
+TASK [include] *****************************************************************
+included: /home/ec2-user/deployment/MAPI_4.5.6.yaml for tst1_mapi, tst1_replicator
+
+TASK [Downloading tomcat files] ************************************************
+ok: [tst1_mapi]
+ok: [tst1_replicator]
+
+TASK [Extracting tomcat archive] ***********************************************
+changed: [tst1_replicator]
+changed: [tst1_mapi]
+
+TASK [Creating Tomcat Configs] *************************************************
+changed: [tst1_replicator]
+ [WARNING]: Consider using the file module with state=touch rather than running
+touch.  If you need to use command because file is insufficient you can add
+warn=False to this command task or set command_warnings=False in ansible.cfg to
+get rid of this message.
+changed: [tst1_mapi]
+
+TASK [Downloading Java] ********************************************************
+fatal: [tst1_mapi]: FAILED! => {"changed": false, "msg": "boto3 and botocore required for this module"}
+changed: [tst1_replicator]
+
+TASK [Extracting Java archive] *************************************************
+ok: [tst1_replicator]
+
+TASK [Adding JAVA path to enviroment file] *************************************
+ok: [tst1_replicator]
+
+TASK [Adding Tomcat environment variables] *************************************
+ok: [tst1_replicator] => (item=JAVA_HOME=/home/ubuntu/deployment/jdk1.7.0_51/)
+ok: [tst1_replicator] => (item=CLASSPATH=/etc/leapset_conf/)
+ok: [tst1_replicator] => (item=CATALINA_OPTS="$CATALINA_OPTS -Xms1024m -Xmx1024m -XX:PermSize=512m -XX:MaxPermSize=512m")
+
+TASK [Setting Ubuntu Enviroment Variables] *************************************
+changed: [tst1_replicator]
+
+TASK [Adding JDBC drivers to Server XML] ***************************************
+changed: [tst1_replicator]
+
+TASK [Moving Mapi.war to host] *************************************************
+ok: [tst1_replicator]
+
+TASK [Moving configs to host] **************************************************
+ok: [tst1_replicator]
+
+TASK [Adding Tomcat Keys to host] **********************************************
+ok: [tst1_replicator]
+
+TASK [Stopping tomcat] *********************************************************
+changed: [tst1_replicator]
+
+TASK [Starting tomcat] *********************************************************
+changed: [tst1_replicator]
+
+TASK [include] *****************************************************************
+fatal: [tst1_replicator]: FAILED! => {"msg": "'replicator' is undefined"}
+	to retry, use: --limit @/home/ec2-user/deploy.retry
+
+PLAY RECAP *********************************************************************
+tst1_mapi                  : ok=5    changed=2    unreachable=0    failed=1   
+tst1_replicator            : ok=16   changed=7    unreachable=0    failed=1   
+
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

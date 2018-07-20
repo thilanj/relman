@@ -8,31 +8,47 @@
       <projectUrl>https://stash.leapset.com/scm/~chamathb/merchant_api.git/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>GitPath</name>
+          <description></description>
+          <defaultValue>https://stash.leapset.com/scm/~chamathb/merchant_api.git</defaultValue>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>BranchName</name>
+          <description></description>
+          <defaultValue>*/relman/ci-dev/*</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://stash.leapset.com/scm/~chamathb/merchant_api.git</url>
+        <url>${GitPath}</url>
         <credentialsId>f30e70d3-5a2f-41c1-8a7f-9d3b6a107bc0</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/relman/*</name>
+        <name>${BranchName}</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.PathRestriction>
-        <includedRegions>relman/</includedRegions>
+        <includedRegions></includedRegions>
         <excludedRegions></excludedRegions>
       </hudson.plugins.git.extensions.impl.PathRestriction>
     </extensions>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>

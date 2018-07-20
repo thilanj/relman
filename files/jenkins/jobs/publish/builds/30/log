@@ -1,0 +1,57 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/publish
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git
+ > git init /var/lib/jenkins/workspace/publish # timeout=10
+Fetching upstream changes from ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/relmandemo^{commit} # timeout=10
+Checking out Revision e625517101f93345a589cf898741a32ecc1f6def (origin/relmandemo)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e625517101f93345a589cf898741a32ecc1f6def
+Commit message: "Test Job"
+ > git rev-list --no-walk e625517101f93345a589cf898741a32ecc1f6def # timeout=10
+[publish] $ /bin/sh -xe /tmp/jenkins1538562502503621558.sh
+++ jq --raw-output .component.build
+++ cat .relman/relman.conf
++ Build=./build.sh
+++ jq --raw-output .configRef
+++ cat .relman/jobs/develop
+cat: .relman/jobs/develop: No such file or directory
++ configRef=
+++ jq --raw-output .component.configRepo
+++ cat .relman/relman.conf
++ configGit=ssh://git@stash.leapset.com:7999/ec/mapi.git
++ echo Build=./build.sh
++ echo configRef=
++ echo configGit=ssh://git@stash.leapset.com:7999/ec/mapi.git
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[publish] $ /bin/sh -xe /tmp/jenkins8190474219711805897.sh
++ mkdir component
++ mkdir component/artifact
++ mkdir component/configs
++ mkdir component/deployment
++ mv deploy.yaml component/deployment
++ cd component/configs
++ git clone ssh://git@stash.leapset.com:7999/ec/mapi.git
+Cloning into 'mapi'...
++ cd ../../
++ tar czf component.tar component
++ mv component.tar MAPI_6.24.5.5.tar
+Publish artifacts to S3 Bucket Build is still running
+Publish artifacts to S3 Bucket Using S3 profile: relman
+Publish artifacts to S3 Bucket bucket=artifactrepo.sysco.com, file=MAPI_6.24.5.5.tar region=ap-southeast-1, will be uploaded from slave=false managed=false , server encryption false
+Finished: SUCCESS

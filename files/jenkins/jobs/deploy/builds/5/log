@@ -1,0 +1,29 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/deploy
+[deploy] $ /bin/sh -xe /tmp/jenkins210198516629231190.sh
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook downloadfromaws.yaml --extra-vars '\''prefix=MAPI_4.5.6'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [127.0.0.1] ***************************************************************
+
+TASK [List s3 objects] *********************************************************
+ok: [127.0.0.1]
+
+TASK [Download s3objects] ******************************************************
+changed: [127.0.0.1] => (item=MAPI_4.5.6.tar)
+changed: [127.0.0.1] => (item=MAPI_4.5.6.yaml)
+
+TASK [Extracting Artifact archive] *********************************************
+fatal: [127.0.0.1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to have been in '/home/ec2-user/downloadfromaws.yaml': line 25, column 10, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n       - name: 'Extracting Artifact archive'\n         ^ here\n"}
+	to retry, use: --limit @/home/ec2-user/downloadfromaws.retry
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=2    changed=1    unreachable=0    failed=1   
+
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

@@ -6,15 +6,31 @@
   <usages>
     <entry>
       <string>S3</string>
-      <ranges>1-298</ranges>
+      <ranges>1-311</ranges>
+    </entry>
+    <entry>
+      <string>mapi_dev_v1</string>
+      <ranges>1-2</ranges>
+    </entry>
+    <entry>
+      <string>publish</string>
+      <ranges>1-43</ranges>
+    </entry>
+    <entry>
+      <string>mapi-dev-v1</string>
+      <ranges>1-11</ranges>
+    </entry>
+    <entry>
+      <string>mapi</string>
+      <ranges>1-2</ranges>
+    </entry>
+    <entry>
+      <string>param</string>
+      <ranges>1-2</ranges>
     </entry>
     <entry>
       <string>mapi_dev</string>
-      <ranges>1-51</ranges>
-    </entry>
-    <entry>
-      <string>test</string>
-      <ranges>1-2</ranges>
+      <ranges>1-80</ranges>
     </entry>
   </usages>
   <facets/>

@@ -1,0 +1,89 @@
+Started by an SCM change
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/mapi_dev_v1
+Cloning the remote Git repository
+Cloning repository https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git init /var/lib/jenkins/workspace/mapi_dev_v1 # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/CDA-12-as-and-engineer-i-want-to-complete-relman-cli-tool
+Seen branch in repository origin/CDA-3-as-an-engineer-i-need-to-r-d-on-config-infrastructure-management-tools
+Seen branch in repository origin/CDA-6-as-an-engineer-i-need-to-configure-artifact-repository
+Seen branch in repository origin/CDA-8-as-an-engineer-i-need-to-configure-relman-repository
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bar-speed-screen-v1
+Seen branch in repository origin/bar-speed-screen-v3
+Seen branch in repository origin/bar-speed-screen-v4
+Seen branch in repository origin/blueocean
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci-dev/bar-speed-screen-v3
+Seen branch in repository origin/ci-foo
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CDA-12-as-and-engineer-i-want-to-complete-relman-cli-tool
+Seen branch in repository origin/feature/CDA-15-relman-testing
+Seen branch in repository origin/feature/CDA-6-as-an-engineer-i-need-to-configure-artifact-repository
+Seen branch in repository origin/feature/CDA-7-as-an-engineer-i-need-to-configure-config-repository
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/hotfix/CDA-3-as-an-engineer-i-need-to-r-d-on-config-infrastructure-management-tools
+Seen branch in repository origin/master
+Seen branch in repository origin/relman/ci-dev/CDA-12-as-and-engineer-i-want-to-complete-relman-cli-tool
+Seen branch in repository origin/relman/ci-dev/CDA-3-as-an-engineer-i-need-to-r-d-on-config-infrastructure-management-tools
+Seen branch in repository origin/relman/ci-dev/CDA-6-as-an-engineer-i-need-to-configure-artifact-repository
+Seen branch in repository origin/relman/ci-dev/CDA-8-as-an-engineer-i-need-to-configure-relman-repository
+Seen branch in repository origin/relman/ci-dev/bar-screen
+Seen branch in repository origin/relman/ci-dev/bar-speed-screen-v4
+Seen branch in repository origin/relman/ci-dev/ci-foo
+Seen branch in repository origin/relman/ci-dev/feature/CDA-12-as-and-engineer-i-want-to-complete-relman-cli-tool
+Seen branch in repository origin/relman/ci-dev/feature/CDA-15-relman-testing
+Seen branch in repository origin/relman/ci-dev/feature/CDA-7-as-an-engineer-i-need-to-configure-config-repository
+Seen branch in repository origin/relman/ci-dev/hotfix/CDA-3-as-an-engineer-i-need-to-r-d-on-config-infrastructure-management-tools
+Seen branch in repository origin/relman/ci-dev/test-after-cleanup1
+Seen branch in repository origin/relman/ci-dev/test-chama
+Seen branch in repository origin/relman/ci-dev/test-chamath2
+Seen branch in repository origin/relman/ci-dev/test-relman
+Seen branch in repository origin/relman/ci-dev/test/test-demo
+Seen branch in repository origin/relman/ci-dev/thilan-jay
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen branch in repository origin/test-after-cleanup1
+Seen branch in repository origin/test-chama
+Seen branch in repository origin/test-chamath2
+Seen branch in repository origin/test-config-loading
+Seen branch in repository origin/test-relman
+Seen branch in repository origin/test/demo_branch
+Seen branch in repository origin/test/test-demo
+Seen branch in repository origin/thilan-jay
+Seen 57 remote branches
+ > git show-ref --tags -d # timeout=10
+Multiple candidate revisions
+Scheduling another build to catch up with mapi_dev_v1
+Checking out Revision 0ff2d9648cb1303f6f9844c3a02b0a9b2cf1e8d5 (origin/relman/ci-dev/bar-screen)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0ff2d9648cb1303f6f9844c3a02b0a9b2cf1e8d5
+Commit message: "DP"
+First time build. Skipping changelog.
+[mapi_dev_v1] $ /bin/sh -xe /tmp/jenkins1670662858292380798.sh
++ sh .relman/build.sh
+sh: .relman/build.sh: No such file or directory
+Build step 'Execute shell' marked build as failure
+[PostBuildScript] - Executing post build scripts.
+[PostBuildScript] - Build does not have any of the results [SUCCESS]. Did not execute build step #0.
+Finished: FAILURE

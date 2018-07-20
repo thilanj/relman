@@ -1,0 +1,11 @@
+commit 0b819eb9cda18508522164a3ca0cc26d90dd558c
+tree f484a8a2c240486e536c6876be27b0bd0685fa03
+parent b034c26c49473dea1a06ada82732c18a745ddaf7
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-14 13:41:27 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-14 13:41:27 +0530
+
+    (relman) config changed
+
+
+
+:100644 100644 142bab27305d4ea9fd307dc982be693ac1ef7004 9273dc4314cb47bb44596f6e647b490a6fc328d8 M	merchant-web/src/main/java/com/leapset/merchantapi/merchant/controller/ConfigController.java

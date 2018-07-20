@@ -1,0 +1,11 @@
+commit ba81821c6dd6f80aa9e0c2dddf6cc00fc2946eeb
+tree cfc37f4c8e46d1f4d88a2ddecbb0de9a493f4cfb
+parent 7af2c8c9661879fe550aa31faac4e981a268d115
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-25 15:46:13 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-25 15:46:13 +0530
+
+    (relman) committing all local changes via relman dev-deploy
+
+
+
+:100644 100644 91f8d77de9e90603d77beba03d05d3e4ed4b1f4d 003afce1eb2af3a09b1dd11799bdbdcf682eee80 M	.relman/jobs.json

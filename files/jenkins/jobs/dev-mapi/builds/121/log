@@ -1,0 +1,36 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/dev-mapi
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git
+ > git init /var/lib/jenkins/workspace/dev-mapi # timeout=10
+Fetching upstream changes from ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse bifrost/thilan/test^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/bifrost/thilan/test^{commit} # timeout=10
+Checking out Revision ae2cd75b501dfe37836cd56790cb0aa92f6b2629 (refs/remotes/origin/bifrost/thilan/test)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ae2cd75b501dfe37836cd56790cb0aa92f6b2629
+Commit message: " (relman)"
+ > git rev-list --no-walk ae2cd75b501dfe37836cd56790cb0aa92f6b2629 # timeout=10
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins7460646718049515061.sh
+++ jq --raw-output .component.build
+++ cat .relman/relman.conf
++ Build=./build.sh
++ sh ./build.sh
+/tmp/jenkins7460646718049515061.sh: line 3:  4432 Terminated              sh $Build
+Build was aborted
+Aborted by [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[PostBuildScript] - Executing post build scripts.
+[PostBuildScript] - Build does not have any of the results [SUCCESS]. Did not execute build step #0.
+Finished: ABORTED

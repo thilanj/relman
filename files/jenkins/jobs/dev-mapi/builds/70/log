@@ -1,0 +1,203 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/dev-mapi
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/apacherebuild^{commit} # timeout=10
+Checking out Revision 25eaeda648c03902729edeff605130b3318ce097 (origin/apacherebuild)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 25eaeda648c03902729edeff605130b3318ce097
+Commit message: "(relman) config changed"
+ > git rev-list --no-walk 25eaeda648c03902729edeff605130b3318ce097 # timeout=10
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins8504106349272279312.sh
+++ jq --raw-output .component.build
+++ cat .relman/relman.conf
++ Build=./build.sh
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins7806797243406051021.sh
++ git_branch_local='"apacherebuild"'
+++ jq --raw-output '."ci-dev"."apacherebuild".version'
+++ cat .relman/jobs.json
++ version=6.24.0.0
+++ jq --raw-output '."ci-dev"."apacherebuild".environment'
+++ cat .relman/jobs.json
++ env=POS2
+++ jq --raw-output '."ci-dev"."apacherebuild".configRef'
+++ cat .relman/jobs.json
++ configRef=c61291f260f5e0dc149926fd4bbabfba42b1d788
+++ jq --raw-output .component.configRepo
+++ cat .relman/relman.conf
++ configGit=ssh://git@stash.leapset.com:7999/ec/mapi.git
++ echo version=6.24.0.0
++ echo env=POS2
++ echo configRef=c61291f260f5e0dc149926fd4bbabfba42b1d788
++ echo configGit=ssh://git@stash.leapset.com:7999/ec/mapi.git
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins8164699856527010027.sh
++ [[ -n c61291f260f5e0dc149926fd4bbabfba42b1d788 ]]
++ echo 'Config Changes Detected'
+Config Changes Detected
++ cd .relman
++ mkdir config
++ cd config
++ git clone ssh://git@stash.leapset.com:7999/ec/mapi.git
+Cloning into 'mapi'...
++ cd mapi
++ echo
+
++ git checkout c61291f260f5e0dc149926fd4bbabfba42b1d788
+Note: checking out 'c61291f260f5e0dc149926fd4bbabfba42b1d788'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at c61291f... Merge pull request #1 in EC/mapi from CLR/7.18.1.0/develop to master
++ scp admin.properties apns.properties couch-cluster.properties couch.properties file-store.properties gcm.properties jdbc.properties job-api.properties lpg.properties mail.properties memcached.properties merchant-api.properties mws.properties paypal.properties profile-api.properties pub-sub-hub.properties pulse.properties rabbitmq.properties sandbox.properties shard.properties wallet.properties ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/config
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'cp /home/ec2-user/configs/server.xml_original /home/ec2-user/configs/server.xml'
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook configprocessor.yaml --extra-vars '\''env=POS2 path=/home/ec2-user/configs'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [127.0.0.1] ***************************************************************
+
+TASK [Get a list of conf in /configs] ******************************************
+ok: [127.0.0.1]
+
+TASK [Replace strings in files found] ******************************************
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.93483, u'inode': 266697, u'isgid': False, u'size': 9325, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/configs/server.xml', u'xusr': False, u'atime': 1528385741.5647044, u'isdir': False, u'ctime': 1530019672.93483, u'wgrp': True, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0664', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1528385741.700703, u'inode': 266698, u'isgid': False, u'size': 9325, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/configs/server.xml_original', u'xusr': False, u'atime': 1528385741.700703, u'isdir': False, u'ctime': 1528385741.700703, u'wgrp': True, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0664', u'islnk': False})
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=0   
+
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook configprocessor.yaml --extra-vars '\''env=POS2 path=/home/ec2-user/merchant_api/config'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [127.0.0.1] ***************************************************************
+
+TASK [Get a list of conf in /configs] ******************************************
+ok: [127.0.0.1]
+
+TASK [Replace strings in files found] ******************************************
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7988312, u'inode': 266706, u'isgid': False, u'size': 179, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/pulse.properties', u'xusr': False, u'atime': 1530019611.6314604, u'isdir': False, u'ctime': 1530019672.7988312, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7868314, u'inode': 266707, u'isgid': False, u'size': 269, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/couch-cluster.properties', u'xusr': False, u'atime': 1530019611.7674592, u'isdir': False, u'ctime': 1530019672.7868314, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7988312, u'inode': 266708, u'isgid': False, u'size': 652, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/paypal.properties', u'xusr': False, u'atime': 1530019611.9034576, u'isdir': False, u'ctime': 1530019672.7988312, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7868314, u'inode': 266709, u'isgid': False, u'size': 181, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/couch.properties', u'xusr': False, u'atime': 1530019612.0354564, u'isdir': False, u'ctime': 1530019672.7868314, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7988312, u'inode': 266710, u'isgid': False, u'size': 799, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/rabbitmq.properties', u'xusr': False, u'atime': 1530019612.171455, u'isdir': False, u'ctime': 1530019672.7988312, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7948313, u'inode': 266711, u'isgid': False, u'size': 1023, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/mail.properties', u'xusr': False, u'atime': 1530019612.3074536, u'isdir': False, u'ctime': 1530019672.7948313, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7908313, u'inode': 145853, u'isgid': False, u'size': 76, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/gcm.properties', u'xusr': False, u'atime': 1528361128.696269, u'isdir': False, u'ctime': 1530019672.7908313, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.8028312, u'inode': 266712, u'isgid': False, u'size': 397, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/sandbox.properties', u'xusr': False, u'atime': 1530019612.571451, u'isdir': False, u'ctime': 1530019672.8028312, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7908313, u'inode': 145856, u'isgid': False, u'size': 196, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/lpg.properties', u'xusr': False, u'atime': 1528361128.700269, u'isdir': False, u'ctime': 1530019672.7908313, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7908313, u'inode': 266713, u'isgid': False, u'size': 4209, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/jdbc.properties', u'xusr': False, u'atime': 1530019612.831448, u'isdir': False, u'ctime': 1530019672.7908313, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.8028312, u'inode': 266714, u'isgid': False, u'size': 716, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/wallet.properties', u'xusr': False, u'atime': 1530019612.9674468, u'isdir': False, u'ctime': 1530019672.8028312, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7948313, u'inode': 145860, u'isgid': False, u'size': 33, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/mws.properties', u'xusr': False, u'atime': 1528361128.704269, u'isdir': False, u'ctime': 1530019672.7948313, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.8028312, u'inode': 266715, u'isgid': False, u'size': 1173, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/shard.properties', u'xusr': False, u'atime': 1530019613.2274442, u'isdir': False, u'ctime': 1530019672.8028312, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7948313, u'inode': 266696, u'isgid': False, u'size': 2245, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/merchant-api.properties', u'xusr': False, u'atime': 1530019613.3634427, u'isdir': False, u'ctime': 1530019672.7948313, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7828314, u'inode': 266699, u'isgid': False, u'size': 59, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/admin.properties', u'xusr': False, u'atime': 1530019613.4954414, u'isdir': False, u'ctime': 1530019672.7828314, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7868314, u'inode': 145849, u'isgid': False, u'size': 118, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/apns.properties', u'xusr': False, u'atime': 1528361128.692269, u'isdir': False, u'ctime': 1530019672.7868314, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7988312, u'inode': 266700, u'isgid': False, u'size': 774, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/profile-api.properties', u'xusr': False, u'atime': 1530019613.7594388, u'isdir': False, u'ctime': 1530019672.7988312, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7948313, u'inode': 266701, u'isgid': False, u'size': 51, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/memcached.properties', u'xusr': False, u'atime': 1530019613.8954372, u'isdir': False, u'ctime': 1530019672.7948313, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7908313, u'inode': 266702, u'isgid': False, u'size': 525, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/job-api.properties', u'xusr': False, u'atime': 1530019614.0274358, u'isdir': False, u'ctime': 1530019672.7908313, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7868314, u'inode': 266703, u'isgid': False, u'size': 199, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/file-store.properties', u'xusr': False, u'atime': 1530019614.1634345, u'isdir': False, u'ctime': 1530019672.7868314, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1530019672.7988312, u'inode': 266704, u'isgid': False, u'size': 191, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/pub-sub-hub.properties', u'xusr': False, u'atime': 1530019614.295433, u'isdir': False, u'ctime': 1530019672.7988312, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=2    changed=1    unreachable=0    failed=0   
+
++ cd ../../
++ rm -rf config
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins8519392080606020138.sh
+++ jq --raw-output .component.deploy
+++ cat .relman/relman.conf
++ Deploy=./deploy.yaml
++ scp merchant-web/target/mapi.war ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/
++ scp ./deploy.yaml ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/
+[PostBuildScript] - Executing post build scripts.
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins9080493863740228531.sh
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook merchant_api/deploy.yml --extra-vars '\''variable_host=POS2'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+[DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and 
+make sure become_method is 'sudo' (default). This feature will be removed in 
+version 2.6. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+
+PLAY [POS2] ********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Downloading tomcat files] ************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Extracting tomcat archive] ***********************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Creating Tomcat Configs] *************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+ [WARNING]: Consider using the file module with state=touch rather than running
+touch.  If you need to use command because file is insufficient you can add
+warn=False to this command task or set command_warnings=False in ansible.cfg to
+get rid of this message.
+
+TASK [Downloading Java] ********************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Extracting Java archive] *************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding JAVA path to enviroment file] *************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding Tomcat environment variables] *************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com] => (item=JAVA_HOME=/home/ubuntu/deployment/jdk1.7.0_51/)
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com] => (item=CLASSPATH=/etc/leapset_conf/)
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com] => (item=CATALINA_OPTS="$CATALINA_OPTS -Xms1024m -Xmx1024m -XX:PermSize=512m -XX:MaxPermSize=512m")
+
+TASK [Setting Ubuntu Enviroment Variables] *************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding JDBC drivers to Server XML] ***************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Moving Mapi.war to host] *************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Moving configs to host] **************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding Tomcat Keys to host] **********************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Stopping tomcat] *********************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Starting tomcat] *********************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+PLAY RECAP *********************************************************************
+ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com : ok=15   changed=6    unreachable=0    failed=0   
+
+Finished: SUCCESS

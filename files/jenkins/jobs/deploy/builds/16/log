@@ -1,0 +1,107 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/deploy
+[deploy] $ /bin/sh -xe /tmp/jenkins9104466747214585037.sh
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook downloadfromaws.yaml --extra-vars '\''prefix=MAPI_4.5.6'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [127.0.0.1] ***************************************************************
+
+TASK [List s3 objects] *********************************************************
+ok: [127.0.0.1]
+
+TASK [Download s3objects] ******************************************************
+changed: [127.0.0.1] => (item=MAPI_4.5.6.tar)
+changed: [127.0.0.1] => (item=MAPI_4.5.6.yaml)
+
+TASK [Extracting Artifact archive] *********************************************
+changed: [127.0.0.1]
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=3    changed=2    unreachable=0    failed=0   
+
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook configprocessor.yaml --extra-vars '\''env=TST2 path=deployment/component/configs/mapi/'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [127.0.0.1] ***************************************************************
+
+TASK [Get a list of conf in /configs] ******************************************
+ok: [127.0.0.1]
+
+TASK [Replace strings in files found] ******************************************
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145509, u'isgid': False, u'size': 179, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/pulse.properties', u'xusr': False, u'atime': 1532001098.5041785, u'isdir': False, u'ctime': 1532001098.5041785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145570, u'isgid': False, u'size': 269, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/couch-cluster.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145521, u'isgid': False, u'size': 652, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/paypal.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145520, u'isgid': False, u'size': 181, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/couch.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145568, u'isgid': False, u'size': 799, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/rabbitmq.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145522, u'isgid': False, u'size': 1023, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/mail.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145572, u'isgid': False, u'size': 76, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/gcm.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145524, u'isgid': False, u'size': 397, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/sandbox.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145436, u'isgid': False, u'size': 196, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/lpg.properties', u'xusr': False, u'atime': 1532001098.5041785, u'isdir': False, u'ctime': 1532001098.5041785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145516, u'isgid': False, u'size': 4209, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/jdbc.properties', u'xusr': False, u'atime': 1532001098.5041785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145573, u'isgid': False, u'size': 716, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/wallet.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145566, u'isgid': False, u'size': 33, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/mws.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145517, u'isgid': False, u'size': 1173, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/shard.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145518, u'isgid': False, u'size': 2245, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/merchant-api.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145567, u'isgid': False, u'size': 59, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/admin.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145514, u'isgid': False, u'size': 118, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/apns.properties', u'xusr': False, u'atime': 1532001098.5041785, u'isdir': False, u'ctime': 1532001098.5041785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145519, u'isgid': False, u'size': 774, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/profile-api.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145571, u'isgid': False, u'size': 51, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/memcached.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145574, u'isgid': False, u'size': 525, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/job-api.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145569, u'isgid': False, u'size': 199, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/file-store.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531905654.0, u'inode': 145523, u'isgid': False, u'size': 191, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'deployment/component/configs/mapi/pub-sub-hub.properties', u'xusr': False, u'atime': 1532001098.5081785, u'isdir': False, u'ctime': 1532001098.5081785, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=2    changed=1    unreachable=0    failed=0   
+
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook configprocessor.yaml --extra-vars '\''env=TST2 path=/home/ec2-user/configs'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [127.0.0.1] ***************************************************************
+
+TASK [Get a list of conf in /configs] ******************************************
+ok: [127.0.0.1]
+
+TASK [Replace strings in files found] ******************************************
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1531821591.951255, u'inode': 266697, u'isgid': False, u'size': 9325, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/configs/server.xml', u'xusr': False, u'atime': 1528385741.5647044, u'isdir': False, u'ctime': 1531821591.951255, u'wgrp': True, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0664', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1528385741.700703, u'inode': 266698, u'isgid': False, u'size': 9325, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/configs/server.xml_original', u'xusr': False, u'atime': 1528385741.700703, u'isdir': False, u'ctime': 1528385741.700703, u'wgrp': True, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0664', u'islnk': False})
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=0   
+
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook deploy.yaml --extra-vars '\''host_group=TST2 mapi=deployment/MAPI_4.5.6.yaml'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [TST2] ********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+ok: [ec2-54-179-171-229.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Executing MAPI] **********************************************************
+skipping: [ec2-54-179-171-229.ap-southeast-1.compute.amazonaws.com]
+fatal: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]: FAILED! => {"reason": "no action detected in task. This often indicates a misspelled module name, or incorrect module path.\n\nThe error appears to have been in '/home/ec2-user/deployment/MAPI_4.5.6.yaml': line 2, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n-\n    hosts: '{{ variable_host | default(''apache'') }}'\n    ^ here\nWe could be wrong, but this one looks like it might be an issue with\nmissing quotes.  Always quote template expression brackets when they\nstart a value. For instance:\n\n    with_items:\n      - {{ foo }}\n\nShould be written as:\n\n    with_items:\n      - \"{{ foo }}\"\n\n\nThe error appears to have been in '/home/ec2-user/deployment/MAPI_4.5.6.yaml': line 2, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n-\n    hosts: '{{ variable_host | default(''apache'') }}'\n    ^ here\nWe could be wrong, but this one looks like it might be an issue with\nmissing quotes.  Always quote template expression brackets when they\nstart a value. For instance:\n\n    with_items:\n      - {{ foo }}\n\nShould be written as:\n\n    with_items:\n      - \"{{ foo }}\"\n"}
+	to retry, use: --limit @/home/ec2-user/deploy.retry
+
+PLAY RECAP *********************************************************************
+ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com : ok=1    changed=0    unreachable=0    failed=1   
+ec2-54-179-171-229.ap-southeast-1.compute.amazonaws.com : ok=1    changed=0    unreachable=0    failed=0   
+
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

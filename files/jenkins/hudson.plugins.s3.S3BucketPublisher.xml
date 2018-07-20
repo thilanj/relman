@@ -4,7 +4,19 @@
     <hudson.plugins.s3.S3Profile>
       <name>relman</name>
       <accessKey>AKIAJ2EOJWXXJ7HLE2FA</accessKey>
-      <secretKey>{AQAAABAAAAAw3ZuhLYqABGIyK95j4HHhiVkqUQkcxWbfS1U5HF2hhKHVM7EB0B29vXd4/WckdFLD1I4Nbrz9Win/mqN0o5/v5Q==}</secretKey>
+      <secretKey>{AQAAABAAAAAwXsFggYzfhJpSZx9HP6D+C2lIFURyz7BMECkdqZZWXBf2+0isDyPv8UMaSrpKYuqIGXsc72oUwp6AieurR0sPRg==}</secretKey>
+      <maxUploadRetries>5</maxUploadRetries>
+      <uploadRetryTime>5</uploadRetryTime>
+      <maxDownloadRetries>5</maxDownloadRetries>
+      <downloadRetryTime>5</downloadRetryTime>
+      <keepStructure>false</keepStructure>
+      <useRole>false</useRole>
+      <signedUrlExpirySeconds>60</signedUrlExpirySeconds>
+    </hudson.plugins.s3.S3Profile>
+    <hudson.plugins.s3.S3Profile>
+      <name>artifactrepo</name>
+      <accessKey>AKIAJMDVILH7LKRJUM4A</accessKey>
+      <secretKey>{AQAAABAAAAAwSVL2yzbqIUvExheRhkghwlIajefSWlnZF4CosfIAXXYbs2z3jPegPPZjxE1+R8dzsM6jL8hUYmld5wxUo/ynoQ==}</secretKey>
       <maxUploadRetries>5</maxUploadRetries>
       <uploadRetryTime>5</uploadRetryTime>
       <maxDownloadRetries>5</maxDownloadRetries>

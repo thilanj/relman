@@ -1,0 +1,12 @@
+commit eb80d4d1c0dc339d3d68002678af35752a746a29
+tree 98c4ee28b90efdfe1b947d1e8fa93418fecdde9f
+parent 6fe0407f6d715ac3678ecdb6d3f4d5855ef7c8f1
+author Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-08 14:16:21 +0530
+committer Thilan Jayasundera <thilanjayasundera@Thilans-MacBook-Pro.local> 2018-06-08 14:16:21 +0530
+
+    Checking in
+
+
+
+:000000 100644 0000000000000000000000000000000000000000 aabddcca72dc40cbe4e1727fcb759a66b8d6dd46 A	.relman/build.sh
+:000000 100644 0000000000000000000000000000000000000000 53623f081f90b397addc5288fb219c347b777f43 A	.relman/deploy.yml

@@ -1,0 +1,167 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://stash.leapset.com/scm/~chamathb/merchant_api.git</url>
+        <credentialsId>f30e70d3-5a2f-41c1-8a7f-9d3b6a107bc0</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/relman/ci-dev/*/*</name>
+      </hudson.plugins.git.BranchSpec>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/relman/ci-dev/*</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.SCMTrigger>
+      <spec>* * * * *</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>sh .relman/build.sh</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>git_branch_local=$(echo &apos;&quot;&apos;$GIT_BRANCH&apos;&quot;&apos; | sed -e &quot;s|origin/relman/ci-dev/||g&quot;)
+git_branch_remote=$(echo $GIT_BRANCH | sed -e &quot;s|origin/||g&quot;)
+echo &quot;git_branch_remote=$git_branch_remote&quot; &gt; build.properties
+version=$(cat .relman/jobs.json | jq --raw-output &apos;.&quot;&apos;ci-dev&apos;&quot;.&apos;$git_branch_local&apos;.version&apos;)
+#env=$(cat relman/jobs.json | jq --raw-output &quot;.ci_jobs.$git_branch_local.environment&quot;)
+env=$(cat .relman/jobs.json | jq --raw-output &apos;.&quot;&apos;ci-dev&apos;&quot;.&apos;$git_branch_local&apos;.environment&apos;)
+configRef=$(cat .relman/jobs.json | jq --raw-output &apos;.&quot;&apos;ci-dev&apos;&quot;.&apos;$git_branch_local&apos;.configRef&apos;)
+configGit=$(cat .relman/relman.conf | jq --raw-output &apos;.component.configRepo&apos;)
+echo &quot;version=$version&quot; &gt;&gt; build.properties
+echo &quot;env=$env&quot; &gt;&gt; build.properties
+echo &quot;configRef=$configRef&quot; &gt;&gt; build.properties
+echo &quot;configGit=$configGit&quot; &gt;&gt; build.properties
+
+
+
+#echo file=mapi_$version-${BUILD_NUMBER}.war &gt;&gt; build.properties
+mv merchant-web/target/mapi.war merchant-web/target/mapi_$version.war
+mv .relman/deploy.yml .relman/deploy_$version.yml
+</command>
+    </hudson.tasks.Shell>
+    <EnvInjectBuilder plugin="envinject@2.1.5">
+      <info>
+        <propertiesFilePath>build.properties</propertiesFilePath>
+      </info>
+    </EnvInjectBuilder>
+    <hudson.tasks.Shell>
+      <command>if [[ -n &quot;$configRef&quot; ]]
+then
+    echo &quot;Config Changes Detected&quot;;
+    cd .relman;
+    mkdir config;
+    cd config;
+    git clone $configGit;
+    cd mapi;
+    echo $configRepo;
+    git checkout $configRef;
+    cd ..
+    tar -zcvf mapi_$version.tar.gz -C mapi .
+    
+else
+    echo &quot;No config changes detected&quot;
+fi
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command></command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.s3.S3BucketPublisher plugin="s3@0.11.2">
+      <profileName>relman</profileName>
+      <entries>
+        <hudson.plugins.s3.Entry>
+          <bucket></bucket>
+          <sourceFile></sourceFile>
+          <excludedFile></excludedFile>
+          <storageClass>STANDARD</storageClass>
+          <selectedRegion>us-gov-west-1</selectedRegion>
+          <noUploadOnFailure>false</noUploadOnFailure>
+          <uploadFromSlave>false</uploadFromSlave>
+          <managedArtifacts>false</managedArtifacts>
+          <useServerSideEncryption>false</useServerSideEncryption>
+          <flatten>false</flatten>
+          <gzipFiles>false</gzipFiles>
+          <showDirectlyInBrowser>false</showDirectlyInBrowser>
+          <keepForever>false</keepForever>
+        </hudson.plugins.s3.Entry>
+      </entries>
+      <dontWaitForConcurrentBuildCompletion>false</dontWaitForConcurrentBuildCompletion>
+      <consoleLogLevel>
+        <name>INFO</name>
+        <value>800</value>
+        <resourceBundleName>sun.util.logging.resources.logging</resourceBundleName>
+      </consoleLogLevel>
+      <pluginFailureResultConstraint>
+        <name>FAILURE</name>
+        <ordinal>2</ordinal>
+        <color>RED</color>
+        <completeBuild>true</completeBuild>
+      </pluginFailureResultConstraint>
+      <userMetadata/>
+    </hudson.plugins.s3.S3BucketPublisher>
+    <org.jenkinsci.plugins.postbuildscript.PostBuildScript plugin="postbuildscript@2.7.0">
+      <config>
+        <scriptFiles/>
+        <groovyScripts/>
+        <buildSteps>
+          <org.jenkinsci.plugins.postbuildscript.model.PostBuildStep>
+            <results>
+              <string>SUCCESS</string>
+            </results>
+            <role>BOTH</role>
+            <buildSteps>
+              <hudson.tasks.Shell>
+                <command>ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com &quot;ansible-playbook merchant_api/deploy_$version.yml --extra-vars &apos;variable_host=$env&apos;&quot;</command>
+              </hudson.tasks.Shell>
+              <org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder plugin="ansible@1.0">
+                <playbook></playbook>
+                <inventory class="org.jenkinsci.plugins.ansible.InventoryDoNotSpecify"/>
+                <limit></limit>
+                <tags></tags>
+                <skippedTags></skippedTags>
+                <startAtTask></startAtTask>
+                <credentialsId></credentialsId>
+                <vaultCredentialsId></vaultCredentialsId>
+                <become>false</become>
+                <becomeUser></becomeUser>
+                <sudo>false</sudo>
+                <sudoUser></sudoUser>
+                <forks>5</forks>
+                <unbufferedOutput>true</unbufferedOutput>
+                <colorizedOutput>false</colorizedOutput>
+                <disableHostKeyChecking>false</disableHostKeyChecking>
+                <additionalParameters></additionalParameters>
+                <copyCredentialsInWorkspace>false</copyCredentialsInWorkspace>
+              </org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder>
+            </buildSteps>
+          </org.jenkinsci.plugins.postbuildscript.model.PostBuildStep>
+        </buildSteps>
+        <markBuildUnstable>false</markBuildUnstable>
+      </config>
+    </org.jenkinsci.plugins.postbuildscript.PostBuildScript>
+  </publishers>
+  <buildWrappers/>
+</project>

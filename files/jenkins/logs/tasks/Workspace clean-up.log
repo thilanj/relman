@@ -1,7 +1,12 @@
-Started at Wed Jun 06 02:34:37 UTC 2018
-Checking S3
-Finished at Wed Jun 06 02:34:37 UTC 2018. 7ms
-Started at Thu Jun 07 02:34:37 UTC 2018
+Started at Thu Jul 19 14:34:49 UTC 2018
+Checking deploy
+Checking dev-mapi
+Checking mapi
+Checking mapi-dev-v1
 Checking mapi_dev
+Checking mapi_dev_bkup_v1
+Checking mapi_dev_v1
+Checking param
+Checking publish
 Checking S3
-Finished at Thu Jun 07 02:34:37 UTC 2018. 3ms
+Finished at Thu Jul 19 14:34:49 UTC 2018. 20ms

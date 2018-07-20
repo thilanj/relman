@@ -1,0 +1,17 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2018-06-21 09:18:09.28 UTC</timestamp>
+  <md5sum>030be40c3ef31d2941f004266ade3886</md5sum>
+  <fileName>Credential id=375c5a41-54eb-492b-8083-5b3b05badcd9 name=jenkins</fileName>
+  <usages>
+    <entry>
+      <string>dev-mapi</string>
+      <ranges>1-133</ranges>
+    </entry>
+    <entry>
+      <string>param</string>
+      <ranges>3-14</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

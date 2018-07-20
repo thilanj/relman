@@ -1,0 +1,463 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/dev-mapi
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress ssh://git@stash.leapset.com:7999/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/apacherebuild^{commit} # timeout=10
+Checking out Revision 4fca2cf1ac3b40366cf7feb1c241f9a0166d7f1b (origin/apacherebuild)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4fca2cf1ac3b40366cf7feb1c241f9a0166d7f1b
+Commit message: "(relman) committing all local changes via relman dev-deploy"
+ > git rev-list --no-walk 62edb5de0e5c031b5921ac7a3673068b72ec0eb6 # timeout=10
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins7129210482269884889.sh
+++ jq --raw-output .component.build
+++ cat .relman/relman.conf
++ Build=./build.sh
++ sh ./build.sh
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Merchant API Parent Pom
+[INFO] Merchant API - Core
+[INFO] Merchant API Web
+[INFO] Merchant API
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Merchant API Parent Pom 6.9.22.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ parent-pom ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Merchant API - Core 6.9.22.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/paypal-beans/2.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/paypal-beans/2.0.0-SNAPSHOT/maven-metadata.xml
+360/360 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/paypal-beans/2.0.0-SNAPSHOT/maven-metadata.xml (360 B at 0.4 KB/sec)
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/mqclient/1.2-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/mqclient/1.2-SNAPSHOT/maven-metadata.xml
+354/354 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/mqclient/1.2-SNAPSHOT/maven-metadata.xml (354 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+366/366 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml (366 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/crypto/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/crypto/1.1.0-SNAPSHOT/maven-metadata.xml
+354/354 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/crypto/1.1.0-SNAPSHOT/maven-metadata.xml (354 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/crypto/1.1.0-SNAPSHOT/crypto-1.1.0-20180516.082729-1.pom
+            Downloading: http://repo.bodar.com/com/leapset/crypto/1.1.0-SNAPSHOT/crypto-1.1.0-20180516.082729-1.pom
+            [WARNING] The POM for com.leapset:crypto:jar:1.1.0-20180516.082729-1 is missing, no dependency information available
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/wallet-beans/1.2.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/wallet-beans/1.2.0-SNAPSHOT/maven-metadata.xml
+            357/357 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/wallet-beans/1.2.0-SNAPSHOT/maven-metadata.xml (357 B at 0.6 KB/sec)
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/wallet-api/1.2.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/wallet-api/1.2.0-SNAPSHOT/maven-metadata.xml
+355/355 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/wallet-api/1.2.0-SNAPSHOT/maven-metadata.xml (355 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth-core/5.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/auth/leapset-auth-core/5.0.0-SNAPSHOT/maven-metadata.xml
+370/370 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth-core/5.0.0-SNAPSHOT/maven-metadata.xml (370 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth/5.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/auth/leapset-auth/5.0.0-SNAPSHOT/maven-metadata.xml
+365/365 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth/5.0.0-SNAPSHOT/maven-metadata.xml (365 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml
+366/366 B                                       Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.6-SNAPSHOT/maven-metadata.xml (366 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+361/361 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/maven-metadata.xml (361 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/sf-connector-lib-1.0.0-20180516.083339-1.pom
+            Downloading: http://repo.bodar.com/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/sf-connector-lib-1.0.0-20180516.083339-1.pom
+            [WARNING] The POM for net.cake:sf-connector-lib:jar:1.0.0-20180516.083339-1 is missing, no dependency information available
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth-core/6.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/auth/leapset-auth-core/6.0.0-SNAPSHOT/maven-metadata.xml
+370/370 B                           Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth-core/6.0.0-SNAPSHOT/maven-metadata.xml (370 B at 0.7 KB/sec)
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth/6.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/auth/leapset-auth/6.0.0-SNAPSHOT/maven-metadata.xml
+365/365 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/auth/leapset-auth/6.0.0-SNAPSHOT/maven-metadata.xml (365 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+358/358 B                                       Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml (358 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml
+356/356 B                           Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/profile-api/1.0.0-SNAPSHOT/maven-metadata.xml (356 B at 0.9 KB/sec)
+                        Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+365/365 B                                       Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml (365 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.9-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/rest/rest-client/6.0.0.9-SNAPSHOT/maven-metadata.xml
+367/367 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.9-SNAPSHOT/maven-metadata.xml (367 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/diagnostic-context-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/diagnostic-context-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+367/367 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/diagnostic-context-lib/1.0.0-SNAPSHOT/maven-metadata.xml (367 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/payment-beans/2.7.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/payment-beans/2.7.0-SNAPSHOT/maven-metadata.xml
+361/361 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/payment-beans/2.7.0-SNAPSHOT/maven-metadata.xml (361 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/common-core/5.4.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/common/common-core/5.4.0-SNAPSHOT/maven-metadata.xml
+366/366 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/common-core/5.4.0-SNAPSHOT/maven-metadata.xml (366 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/api-core/5.4.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/common/api-core/5.4.0-SNAPSHOT/maven-metadata.xml
+363/363 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/api-core/5.4.0-SNAPSHOT/maven-metadata.xml (363 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/admin-beans/5.0.1-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/admin-beans/5.0.1-SNAPSHOT/maven-metadata.xml
+359/359 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/admin-beans/5.0.1-SNAPSHOT/maven-metadata.xml (359 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/operator-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/operator-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+359/359 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/operator-beans/1.0.0-SNAPSHOT/maven-metadata.xml (359 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/operator-api/1.0.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/operator-api/1.0.0-SNAPSHOT/maven-metadata.xml
+357/357 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/operator-api/1.0.0-SNAPSHOT/maven-metadata.xml (357 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/leapset.repository/javapns/javapns/2.2/javapns-2.2.pom
+            Downloading: http://repo.bodar.com/javapns/javapns/2.2/javapns-2.2.pom
+            Downloading: http://repo.maven.apache.org/maven2/javapns/javapns/2.2/javapns-2.2.pom
+            Downloading: http://files.couchbase.com/maven2/javapns/javapns/2.2/javapns-2.2.pom
+            [WARNING] The POM for javapns:javapns:jar:2.2 is missing, no dependency information available
+Downloading: http://repo.leapset.com/archiva/repository/leapset.repository/com/google/android/gcm/gcm-server/1.0.2/gcm-server-1.0.2.pom
+            Downloading: http://repo.bodar.com/com/google/android/gcm/gcm-server/1.0.2/gcm-server-1.0.2.pom
+            Downloading: http://repo.maven.apache.org/maven2/com/google/android/gcm/gcm-server/1.0.2/gcm-server-1.0.2.pom
+            Downloading: http://files.couchbase.com/maven2/com/google/android/gcm/gcm-server/1.0.2/gcm-server-1.0.2.pom
+            [WARNING] The POM for com.google.android.gcm:gcm-server:jar:1.0.2 is missing, no dependency information available
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.8-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/rest/rest-client/6.0.0.8-SNAPSHOT/maven-metadata.xml
+366/366 B                           Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/rest/rest-client/6.0.0.8-SNAPSHOT/maven-metadata.xml (366 B at 0.7 KB/sec)
+Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-api/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/shard-api/1.1.0-SNAPSHOT/maven-metadata.xml
+354/354 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-api/1.1.0-SNAPSHOT/maven-metadata.xml (354 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/shard/1.1.0-SNAPSHOT/maven-metadata.xml
+350/350 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard/1.1.0-SNAPSHOT/maven-metadata.xml (350 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-core/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/shard-core/1.1.0-SNAPSHOT/maven-metadata.xml
+355/355 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-core/1.1.0-SNAPSHOT/maven-metadata.xml (355 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/3.4.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/leapset-beans/3.4.0-SNAPSHOT/maven-metadata.xml
+361/361 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/3.4.0-SNAPSHOT/maven-metadata.xml (361 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/core-api-test-utils/5.4.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/common/core-api-test-utils/5.4.0-SNAPSHOT/maven-metadata.xml
+374/374 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/common/core-api-test-utils/5.4.0-SNAPSHOT/maven-metadata.xml (374 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-test/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/net/cake/shard-test/1.1.0-SNAPSHOT/maven-metadata.xml
+355/355 B               Downloaded: http://repo.leapset.com/archiva/repository/snapshot/net/cake/shard-test/1.1.0-SNAPSHOT/maven-metadata.xml (355 B at 0.9 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml
+361/361 B                                       Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/1.1.0-SNAPSHOT/maven-metadata.xml (361 B at 1.0 KB/sec)
+            Downloading: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/snapshot/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://repo.bodar.com/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml
+362/362 B                                       Downloaded: http://repo.leapset.com/archiva/repository/snapshot/com/leapset/leapset-beans/2.20.0-SNAPSHOT/maven-metadata.xml (362 B at 1.0 KB/sec)
+            [INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ merchant-core ---
+[INFO] Deleting /var/lib/jenkins/workspace/dev-mapi/merchant-core/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ merchant-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 36 resources
+[INFO] Copying 23 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ merchant-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 274 source files to /var/lib/jenkins/workspace/dev-mapi/merchant-core/target/classes
+[INFO] /var/lib/jenkins/workspace/dev-mapi/merchant-core/src/main/java/com/leapset/merchantapi/core/scheduler/MessageQueueReconnectScheduler.java: Some input files use or override a deprecated API.
+[INFO] /var/lib/jenkins/workspace/dev-mapi/merchant-core/src/main/java/com/leapset/merchantapi/core/scheduler/MessageQueueReconnectScheduler.java: Recompile with -Xlint:deprecation for details.
+[INFO] /var/lib/jenkins/workspace/dev-mapi/merchant-core/src/main/java/com/leapset/merchantapi/core/service/impl/ConfigManagerImpl.java: Some input files use unchecked or unsafe operations.
+[INFO] /var/lib/jenkins/workspace/dev-mapi/merchant-core/src/main/java/com/leapset/merchantapi/core/service/impl/ConfigManagerImpl.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ merchant-core ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ merchant-core ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ merchant-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ merchant-core ---
+[INFO] Building jar: /var/lib/jenkins/workspace/dev-mapi/merchant-core/target/merchant-core-6.9.22.2-SNAPSHOT.jar
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Merchant API Web 6.9.22.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/paypal-beans/2.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/mqclient/1.2-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/crypto/1.1.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/wallet-beans/1.2.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/sf-connector-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/auth/leapset-auth-core/6.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/profile-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/config-server-client/2.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/rest/rest-client/6.0.0.9-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/diagnostic-context-lib/1.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/payment-beans/2.7.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/common/common-core/5.4.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/admin-beans/5.0.1-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/operator-beans/1.0.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/shard-api/1.1.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/shard-core/1.1.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/leapset-beans/3.4.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/com/leapset/common/core-api-test-utils/5.4.0-SNAPSHOT/maven-metadata.xml
+            Downloading: https://oss.sonatype.org/content/repositories/releases/net/cake/shard-test/1.1.0-SNAPSHOT/maven-metadata.xml
+            [INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ mapi ---
+[INFO] Deleting /var/lib/jenkins/workspace/dev-mapi/merchant-web/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ mapi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/dev-mapi/merchant-web/target/resources
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ mapi ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 30 source files to /var/lib/jenkins/workspace/dev-mapi/merchant-web/target/classes
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.6:run (default) @ mapi ---
+[WARNING] Parameter tasks is deprecated, use target instead
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ mapi ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ mapi ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ mapi ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [mapi] in [/var/lib/jenkins/workspace/dev-mapi/merchant-web/target/mapi]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/var/lib/jenkins/workspace/dev-mapi/merchant-web/src/main/webapp]
+[INFO] Webapp assembled in [630 msecs]
+[INFO] Building war: /var/lib/jenkins/workspace/dev-mapi/merchant-web/target/mapi.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Merchant API 6.9.22.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://maven.springframework.org/snapshot/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+Downloading: http://maven.springframework.org/release/com/leapset/mws/leapset-auth/6.0.0.3-SNAPSHOT/maven-metadata.xml
+                        [INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ merchant-api ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.5.3.201107060350:prepare-agent (pre-test) @ merchant-api ---
+[INFO] Skipping JaCoCo for project with packaging type 'pom'
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.5.3.201107060350:report (post-test) @ merchant-api ---
+[INFO] Skipping JaCoCo for project with packaging type 'pom'
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Merchant API Parent Pom ........................... SUCCESS [  0.323 s]
+[INFO] Merchant API - Core ............................... SUCCESS [ 35.170 s]
+[INFO] Merchant API Web .................................. SUCCESS [ 29.665 s]
+[INFO] Merchant API ...................................... SUCCESS [  0.564 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:06 min
+[INFO] Finished at: 2018-06-26T07:20:18+00:00
+[INFO] Final Memory: 38M/92M
+[INFO] ------------------------------------------------------------------------
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins6086399316834852020.sh
++ git_branch_local='"apacherebuild"'
+++ jq --raw-output '."ci-dev"."apacherebuild".version'
+++ cat .relman/jobs.json
++ version=5.6
+++ jq --raw-output '."ci-dev"."apacherebuild".environment'
+++ cat .relman/jobs.json
++ env=POS2
+++ jq --raw-output '."ci-dev"."apacherebuild".configRef'
+++ cat .relman/jobs.json
++ configRef=c61291f260f5e0dc149926fd4bbabfba42b1d788
+++ jq --raw-output .component.configRepo
+++ cat .relman/relman.conf
++ configGit=ssh://git@stash.leapset.com:7999/ec/mapi.git
++ echo version=5.6
++ echo env=POS2
++ echo configRef=c61291f260f5e0dc149926fd4bbabfba42b1d788
++ echo configGit=ssh://git@stash.leapset.com:7999/ec/mapi.git
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'build.properties'
+[EnvInject] - Variables injected successfully.
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins8296267242898625770.sh
++ [[ -n c61291f260f5e0dc149926fd4bbabfba42b1d788 ]]
++ echo 'Config Changes Detected'
+Config Changes Detected
++ cd .relman
++ mkdir config
++ cd config
++ git clone ssh://git@stash.leapset.com:7999/ec/mapi.git
+Cloning into 'mapi'...
++ cd mapi
++ echo
+
++ git checkout c61291f260f5e0dc149926fd4bbabfba42b1d788
+Note: checking out 'c61291f260f5e0dc149926fd4bbabfba42b1d788'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at c61291f... Merge pull request #1 in EC/mapi from CLR/7.18.1.0/develop to master
++ scp admin.properties apns.properties couch-cluster.properties couch.properties file-store.properties gcm.properties jdbc.properties job-api.properties lpg.properties mail.properties memcached.properties merchant-api.properties mws.properties paypal.properties profile-api.properties pub-sub-hub.properties pulse.properties rabbitmq.properties sandbox.properties shard.properties wallet.properties ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/config
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'cp /home/ec2-user/configs/server.xml_original /home/ec2-user/configs/server.xml'
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook configprocessor.yaml --extra-vars '\''env=POS2 path=/home/ec2-user/configs'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [127.0.0.1] ***************************************************************
+
+TASK [Get a list of conf in /configs] ******************************************
+ok: [127.0.0.1]
+
+TASK [Replace strings in files found] ******************************************
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.6375463, u'inode': 266697, u'isgid': False, u'size': 9325, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/configs/server.xml', u'xusr': False, u'atime': 1528385741.5647044, u'isdir': False, u'ctime': 1529997622.6375463, u'wgrp': True, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0664', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1528385741.700703, u'inode': 266698, u'isgid': False, u'size': 9325, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/configs/server.xml_original', u'xusr': False, u'atime': 1528385741.700703, u'isdir': False, u'ctime': 1528385741.700703, u'wgrp': True, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0664', u'islnk': False})
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=0   
+
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook configprocessor.yaml --extra-vars '\''env=POS2 path=/home/ec2-user/merchant_api/config'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [127.0.0.1] ***************************************************************
+
+TASK [Get a list of conf in /configs] ******************************************
+ok: [127.0.0.1]
+
+TASK [Replace strings in files found] ******************************************
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.5015476, u'inode': 266700, u'isgid': False, u'size': 179, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/pulse.properties', u'xusr': False, u'atime': 1529996861.2733605, u'isdir': False, u'ctime': 1529997622.5015476, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4895477, u'inode': 266701, u'isgid': False, u'size': 269, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/couch-cluster.properties', u'xusr': False, u'atime': 1529996861.405359, u'isdir': False, u'ctime': 1529997622.4895477, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4975476, u'inode': 266702, u'isgid': False, u'size': 652, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/paypal.properties', u'xusr': False, u'atime': 1529996861.5413578, u'isdir': False, u'ctime': 1529997622.4975476, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4895477, u'inode': 266703, u'isgid': False, u'size': 181, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/couch.properties', u'xusr': False, u'atime': 1529996861.6733563, u'isdir': False, u'ctime': 1529997622.4895477, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.5015476, u'inode': 266704, u'isgid': False, u'size': 799, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/rabbitmq.properties', u'xusr': False, u'atime': 1529996861.805355, u'isdir': False, u'ctime': 1529997622.5015476, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4975476, u'inode': 266705, u'isgid': False, u'size': 1023, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/mail.properties', u'xusr': False, u'atime': 1529996861.9373536, u'isdir': False, u'ctime': 1529997622.4975476, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4895477, u'inode': 145853, u'isgid': False, u'size': 76, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/gcm.properties', u'xusr': False, u'atime': 1528361128.696269, u'isdir': False, u'ctime': 1529997622.4895477, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.5055475, u'inode': 266706, u'isgid': False, u'size': 397, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/sandbox.properties', u'xusr': False, u'atime': 1529996862.197351, u'isdir': False, u'ctime': 1529997622.5055475, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4935477, u'inode': 145856, u'isgid': False, u'size': 196, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/lpg.properties', u'xusr': False, u'atime': 1528361128.700269, u'isdir': False, u'ctime': 1529997622.4935477, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4935477, u'inode': 266707, u'isgid': False, u'size': 4209, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/jdbc.properties', u'xusr': False, u'atime': 1529996862.4613483, u'isdir': False, u'ctime': 1529997622.4935477, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.5055475, u'inode': 266708, u'isgid': False, u'size': 716, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/wallet.properties', u'xusr': False, u'atime': 1529996862.5933468, u'isdir': False, u'ctime': 1529997622.5055475, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4975476, u'inode': 145860, u'isgid': False, u'size': 33, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/mws.properties', u'xusr': False, u'atime': 1528361128.704269, u'isdir': False, u'ctime': 1529997622.4975476, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.5055475, u'inode': 266709, u'isgid': False, u'size': 1173, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/shard.properties', u'xusr': False, u'atime': 1529996862.8493443, u'isdir': False, u'ctime': 1529997622.5055475, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4975476, u'inode': 266710, u'isgid': False, u'size': 2245, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/merchant-api.properties', u'xusr': False, u'atime': 1529996862.981343, u'isdir': False, u'ctime': 1529997622.4975476, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4855478, u'inode': 266711, u'isgid': False, u'size': 59, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/admin.properties', u'xusr': False, u'atime': 1529996863.1133416, u'isdir': False, u'ctime': 1529997622.4855478, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+ok: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4895477, u'inode': 145849, u'isgid': False, u'size': 118, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/apns.properties', u'xusr': False, u'atime': 1528361128.692269, u'isdir': False, u'ctime': 1529997622.4895477, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.5015476, u'inode': 266712, u'isgid': False, u'size': 774, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/profile-api.properties', u'xusr': False, u'atime': 1529996863.373339, u'isdir': False, u'ctime': 1529997622.5015476, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4975476, u'inode': 266713, u'isgid': False, u'size': 51, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/memcached.properties', u'xusr': False, u'atime': 1529996863.5053375, u'isdir': False, u'ctime': 1529997622.4975476, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4935477, u'inode': 266714, u'isgid': False, u'size': 525, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/job-api.properties', u'xusr': False, u'atime': 1529996863.6373363, u'isdir': False, u'ctime': 1529997622.4935477, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.4895477, u'inode': 266715, u'isgid': False, u'size': 199, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/file-store.properties', u'xusr': False, u'atime': 1529996863.7693348, u'isdir': False, u'ctime': 1529997622.4895477, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+changed: [127.0.0.1] => (item={u'uid': 500, u'woth': False, u'mtime': 1529997622.5015476, u'inode': 266696, u'isgid': False, u'size': 191, u'roth': True, u'isuid': False, u'isreg': True, u'pw_name': u'ec2-user', u'gid': 500, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'ec2-user', u'path': u'/home/ec2-user/merchant_api/config/pub-sub-hub.properties', u'xusr': False, u'atime': 1529996863.9013336, u'isdir': False, u'ctime': 1529997622.5015476, u'wgrp': False, u'xgrp': False, u'dev': 51713, u'isblk': False, u'isfifo': False, u'mode': u'0644', u'islnk': False})
+
+PLAY RECAP *********************************************************************
+127.0.0.1                  : ok=2    changed=1    unreachable=0    failed=0   
+
++ cd ../../
++ rm -rf config
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins6941681079038612862.sh
+++ jq --raw-output .component.deploy
+++ cat .relman/relman.conf
++ Deploy=./deploy.yaml
++ scp merchant-web/target/mapi.war ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/
++ scp ./deploy.yaml ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com:/home/ec2-user/merchant_api/
+[PostBuildScript] - Executing post build scripts.
+[dev-mapi] $ /bin/sh -xe /tmp/jenkins6425286316395816206.sh
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook merchant_api/deploy.yml --extra-vars '\''variable_host=POS2'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+[DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and 
+make sure become_method is 'sudo' (default). This feature will be removed in 
+version 2.6. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+
+PLAY [POS2] ********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Downloading tomcat files] ************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Extracting tomcat archive] ***********************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Creating Tomcat Configs] *************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+ [WARNING]: Consider using the file module with state=touch rather than running
+touch.  If you need to use command because file is insufficient you can add
+warn=False to this command task or set command_warnings=False in ansible.cfg to
+get rid of this message.
+
+TASK [Downloading Java] ********************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Extracting Java archive] *************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding JAVA path to enviroment file] *************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding Tomcat environment variables] *************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com] => (item=JAVA_HOME=/home/ubuntu/deployment/jdk1.7.0_51/)
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com] => (item=CLASSPATH=/etc/leapset_conf/)
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com] => (item=CATALINA_OPTS="$CATALINA_OPTS -Xms1024m -Xmx1024m -XX:PermSize=512m -XX:MaxPermSize=512m")
+
+TASK [Setting Ubuntu Enviroment Variables] *************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding JDBC drivers to Server XML] ***************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Moving Mapi.war to host] *************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Moving configs to host] **************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding Tomcat Keys to host] **********************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Stopping tomcat] *********************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Starting tomcat] *********************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+PLAY RECAP *********************************************************************
+ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com : ok=15   changed=7    unreachable=0    failed=0   
+
+Finished: SUCCESS

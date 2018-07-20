@@ -1,0 +1,23 @@
+commit 93fb6381782e55fc6ddd9bd15479eac01c827473
+tree 7ba847c2ed942fd050e37fcba5e82374a1b19967
+parent 28e2711d86d45f53ea2ea6df1a7cbf25ff782528
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-25 16:12:58 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-25 16:12:58 +0530
+
+    (relman) committing all local changes via relman dev-deploy
+
+
+
+:100644 100644 d90fca6cbe88e568c4ff76f0bd310c70e2d3bb0f ef1772c89bd0e80116c2a7d707c5dbe8d29219f3 M	merchant-core/src/main/java/com/leapset/merchantapi/core/Constants.java
+commit 28e2711d86d45f53ea2ea6df1a7cbf25ff782528
+tree e0da702035c38f95089ed80489ee5a8de21fcf7f
+parent fc5439563363f017e4007575a5fcf485d7af6359
+author Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-25 11:23:50 +0530
+committer Chamath Bogahawatta <Chamath.Bogahawatta@trycake.com> 2018-06-25 11:23:50 +0530
+
+    test demo
+
+
+
+:000000 100644 0000000000000000000000000000000000000000 aabddcca72dc40cbe4e1727fcb759a66b8d6dd46 A	install/build.sh
+:000000 100644 0000000000000000000000000000000000000000 53623f081f90b397addc5288fb219c347b777f43 A	install/deploy.yml

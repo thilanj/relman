@@ -1,0 +1,78 @@
+Started by user [8mha:////4As7Vq+f5gQyrLYioxYaMp0I2JKTcvw5nlTw6CK0QoQ+AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyhEgYe/dLi1CL9otSc3MQ8AILrgOPBAAAA[0mThilan Jayasundera
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/deploy
+[deploy] $ /bin/sh -xe /tmp/jenkins5245380490055585016.sh
++ ssh ec2-user@ec2-54-169-184-115.ap-southeast-1.compute.amazonaws.com 'ansible-playbook deploy.yaml --extra-vars '\''ENV=POS host_group=TST2 mapi=deployment/MAPI_4.5.6.yaml'\'''
+[DEPRECATION WARNING]: [defaults]hostfile option, The key is misleading as it 
+can also be a list of hosts, a directory or a list of paths , use [defaults] 
+inventory=/path/to/file|dir instead. This feature will be removed in version 
+2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False
+ in ansible.cfg.
+
+PLAY [TST2] ********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [ec2-54-179-171-229.ap-southeast-1.compute.amazonaws.com]
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Executing MAPI] **********************************************************
+ [WARNING]: when statements should not include jinja2 templating delimiters
+such as {{ }} or {% %}. Found: inventory_hostname in groups['{{ENV}}2']
+skipping: [ec2-54-179-171-229.ap-southeast-1.compute.amazonaws.com]
+ [WARNING]: when statements should not include jinja2 templating delimiters
+such as {{ }} or {% %}. Found: inventory_hostname in groups['{{ENV}}2']
+included: /home/ec2-user/deployment/MAPI_4.5.6.yaml for ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com
+
+TASK [Downloading tomcat files] ************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Extracting tomcat archive] ***********************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Creating Tomcat Configs] *************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+ [WARNING]: Consider using the file module with state=touch rather than running
+touch.  If you need to use command because file is insufficient you can add
+warn=False to this command task or set command_warnings=False in ansible.cfg to
+get rid of this message.
+
+TASK [Downloading Java] ********************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Extracting Java archive] *************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding JAVA path to enviroment file] *************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding Tomcat environment variables] *************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com] => (item=JAVA_HOME=/home/ubuntu/deployment/jdk1.7.0_51/)
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com] => (item=CLASSPATH=/etc/leapset_conf/)
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com] => (item=CATALINA_OPTS="$CATALINA_OPTS -Xms1024m -Xmx1024m -XX:PermSize=512m -XX:MaxPermSize=512m")
+
+TASK [Setting Ubuntu Enviroment Variables] *************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding JDBC drivers to Server XML] ***************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Moving Mapi.war to host] *************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Moving configs to host] **************************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Adding Tomcat Keys to host] **********************************************
+ok: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Stopping tomcat] *********************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+TASK [Starting tomcat] *********************************************************
+changed: [ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com]
+
+PLAY RECAP *********************************************************************
+ec2-13-250-41-19.ap-southeast-1.compute.amazonaws.com : ok=16   changed=7    unreachable=0    failed=0   
+ec2-54-179-171-229.ap-southeast-1.compute.amazonaws.com : ok=1    changed=0    unreachable=0    failed=0   
+
+Finished: SUCCESS

@@ -1,0 +1,57 @@
+Started by an SCM change
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/mapi_dev
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git init /var/lib/jenkins/workspace/mapi_dev # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://stash.leapset.com/scm/~chamathb/merchant_api.git # timeout=10
+Fetching upstream changes from https://stash.leapset.com/scm/~chamathb/merchant_api.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://stash.leapset.com/scm/~chamathb/merchant_api.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/CLR/7.18.1.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/develop
+Seen branch in repository origin/CLR/7.18.2.0/release
+Seen branch in repository origin/bar-speed-screen-v1
+Seen branch in repository origin/bar-speed-screen-v3
+Seen branch in repository origin/bar-speed-screen-v4
+Seen branch in repository origin/bugfix/POS-4780-6.24.0.0-assignments-jobs-created
+Seen branch in repository origin/ci-dev/bar-speed-screen-v3
+Seen branch in repository origin/ci/ci-test2
+Seen branch in repository origin/ci/ci_test1
+Seen branch in repository origin/ci/ci_test2
+Seen branch in repository origin/ci/ci_test3
+Seen branch in repository origin/feature/CLR-Cake-OLO-Phase2
+Seen branch in repository origin/feature/ci-barscreen
+Seen branch in repository origin/feature/ci-test1
+Seen branch in repository origin/feature/ci-test2
+Seen branch in repository origin/feature/ci_test3
+Seen branch in repository origin/master
+Seen branch in repository origin/relman/ci-dev/bar-screen
+Seen branch in repository origin/relman/ci-dev/bar-speed-screen-v4
+Seen branch in repository origin/relman/ci-dev/thilan-jay
+Seen branch in repository origin/task/POS-4430-mapi-change-to-support-null-value
+Seen branch in repository origin/temp/POS-4780-changes
+Seen branch in repository origin/temp/plat-1-build
+Seen branch in repository origin/thilan-jay
+Seen 25 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 6fe0407f6d715ac3678ecdb6d3f4d5855ef7c8f1 (origin/relman/ci-dev/thilan-jay)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6fe0407f6d715ac3678ecdb6d3f4d5855ef7c8f1
+Commit message: "(relman) config changed"
+First time build. Skipping changelog.
+[mapi_dev] $ /bin/sh -xe /tmp/jenkins9117745483503479103.sh
++ sh .relman/build.sh
+sh: .relman/build.sh: No such file or directory
+Build step 'Execute shell' marked build as failure
+[PostBuildScript] - Executing post build scripts.
+[PostBuildScript] - Build does not have any of the results [SUCCESS]. Did not execute build step #0.
+Finished: FAILURE

@@ -1,0 +1,11 @@
+commit 6c391f612aad16ea389792d43302cc26ab8f052f
+tree 247e30a5e91c19e87b042f1ad2b340ad4379aaf9
+parent 2a8a5e996e0f92dc26bf77227265f3bb46012f0c
+author Thilan J <thilan.jayasundera@sysco.com> 2018-06-21 15:33:25 +0530
+committer Thilan J <thilan.jayasundera@sysco.com> 2018-06-21 15:33:25 +0530
+
+    Test Jenkins Api
+
+
+
+:100644 100644 d38ba19d7eb4ae3a3ab2755a2f2bd1d9e3b4f8b5 7474dc8716b8d51d311f6d5587a86028d2e491be M	.relman/relman.conf
